@@ -1,0 +1,349 @@
+ /* Flyout Navigation  */
+ /*---------- Mobile Site nav toggler ----------*/
+ .menu-style-flyout .mean-container a.meanmenu-reveal {
+     padding: 0;
+     top: 15px;
+     color: var(--heading-color);
+     transition: 0s;
+ }
+
+ .menu-style-flyout .mean-container .mean-nav {
+     background: var(--white-color);
+     position: absolute;
+     width: 100%;
+     left: 0;
+     min-width: 266px;
+     margin-top: 50px;
+     z-index: 55;
+ }
+
+ .menu-style-flyout .mean-container .mean-bar {
+     background: transparent;
+     float: none;
+     position: relative;
+     margin-right: 0;
+ }
+
+
+ .menu-style-flyout .mean-container .mean-nav ul li a {
+     background: var(--white-color);
+     color: var(--heading-color);
+     text-transform: capitalize;
+     border-bottom: 1px solid #f2ebeb;
+     font-size: 15px;
+     font-weight: 700;
+     color: var(--heading-color);
+     letter-spacing: -0.1px;
+ }
+
+
+ .menu-style-flyout .mean-container a.meanmenu-reveal span {
+     background-color: var(--heading-color);
+ }
+
+ .menu-style-flyout .mean-container .mean-nav ul.navbar-nav {
+     /* border-radius: 10px; */
+     overflow: hidden;
+     box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.07);
+ }
+
+ .menu-style-flyout .mean-container .mean-nav ul li a:hover,
+ .menu-style-flyout .mean-container .mean-nav ul li a.mean-expand:hover {
+     background-color: #F8F9FA;
+ }
+
+
+
+ .menu-style-flyout .mean-container .mean-nav ul li li a {
+     opacity: .95;
+ }
+
+
+
+ #page:before {
+     content: "";
+     position: fixed;
+     top: 0;
+     right: 0;
+     height: 100%;
+     width: 0;
+     background: #fff;
+     z-index: 3;
+     opacity: 0;
+     visibility: hidden;
+     -webkit-transition: .3s;
+     -o-transition: .3s;
+     transition: .4s;
+     width: 100%;
+ }
+
+
+ .offcanvas--open {
+     overflow: hidden;
+ }
+
+ .menu-style-flyout .menu-style-flyout.navbar {
+     padding-top: 0.625rem;
+     padding-bottom: 0.625rem;
+     display: block !important;
+ }
+
+
+
+ .menu-style-flyout.navbar.active .navbar-inner {
+     right: 0;
+     transform: translate(0);
+     overflow-x: hidden;
+ }
+
+ .navbar.menu-style-flyout .navbar-inner {
+     right: 0;
+     -webkit-transition: left 0.3s 0.2s;
+     -o-transition: left 0.3s 0.2s;
+     transition: transform 0.3s 0.2s;
+     transform: translatex(calc(-1*(-20px + -100%)));
+     width: 470px;
+     max-width: 80%;
+     padding: 0px 30px 70px 66px;
+ }
+
+ .menu-style-flyout.navbar .nav-link {
+     border-bottom: 1px solid #eee;
+     padding-top: 0.75rem;
+     padding-bottom: 0.75rem;
+ }
+
+
+
+
+
+ .navbar.navbar-dark .nav-link:hover,
+ .navbar.navbar-dark .nav-link:focus,
+ .navbar.navbar-dark .nav-link.active,
+ .navbar.navbar-dark .nav-link.current-menu-item {
+     color: #2c2e30;
+ }
+
+
+ .menu-style-flyout .navbar-inner {
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     width: 80%;
+     padding-top: 65px;
+     background-color: var(--heading-color);
+     -webkit-box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.15);
+     box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.15);
+     border-radius: 0;
+     overflow-y: auto;
+     z-index: 1050;
+ }
+
+
+ .menu-style-flyout .navbar-inner .dropdown-menu:before {
+     content: none;
+ }
+
+ .menu-style-flyout .navbar-inner .dropdown-menu {
+     border: medium none;
+     background: none;
+     border-radius: 0;
+     -webkit-box-shadow: none;
+     box-shadow: none;
+     float: none;
+     margin: 0;
+     padding-top: 0;
+     position: static;
+ }
+
+
+ .nav--open #page-wrapper {
+     -webkit-transform: translate3d(150px, 0, 0);
+     transform: translate3d(150px, 0, 0);
+ }
+
+ .menu-style-flyout .navbar-toggler {
+     border: none;
+     background-image: none;
+     border-radius: 0;
+     z-index: 1;
+     display: inline-block;
+ }
+
+ .menu-style-flyout .navbar-inner .navbar-toggler {
+     display: block;
+     color: rgb(255 255 255 / 30%);
+     font-size: 13px;
+     letter-spacing: 3px;
+     padding: 40px 0 30px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     position: sticky;
+     top: 0;
+     background-color: #161C2D;
+     z-index: 5555;
+ }
+
+ .menu-style-flyout .navbar-toggler-icon {
+     background-image: none !important;
+     display: inline-block;
+ }
+
+ .menu-style-flyout .navbar-toggler-icon,
+ .menu-style-flyout .navbar-toggler-icon:before,
+ .menu-style-flyout .navbar-toggler-icon:after {
+     -webkit-transition: .3s ease-in-out;
+     -o-transition: .3s ease-in-out;
+     transition: .3s ease-in-out;
+ }
+
+
+
+ .menu-style-flyout.trydus-main-menu-wrap .navbar-inner .navbar-toggler-icon {
+     background-color: transparent;
+     -webkit-transform: scale(0.85) rotate(-270deg);
+     -ms-transform: scale(0.85) rotate(-270deg);
+     transform: scale(0.85) rotate(-270deg);
+ }
+
+ .menu-style-flyout.trydus-main-menu-wrap .navbar-inner .navbar-toggler-icon:before {
+     top: 0;
+     -webkit-transform: scale(0.65) rotate(-45deg);
+     -ms-transform: scale(0.65) rotate(-45deg);
+     transform: scale(0.65) rotate(-45deg);
+ }
+
+ .menu-style-flyout.trydus-main-menu-wrap .navbar-inner .navbar-toggler-icon:after {
+     top: 0;
+     -webkit-transform: scale(0.65) rotate(45deg);
+     -ms-transform: scale(0.65) rotate(45deg);
+     transform: scale(0.65) rotate(45deg);
+ }
+
+ .menu-style-flyout .main-navigation ul.navbar-nav>li {
+     display: block;
+     width: 100%;
+     position: relative;
+ }
+
+ .menu-style-flyout .main-navigation ul.navbar-nav>li a {
+     display: block;
+     border-bottom: 1px solid #ccc6;
+ }
+
+ .menu-style-flyout .main-navigation ul.navbar-nav .menu-item-has-children .sub-menu {
+     position: static;
+     display: block;
+     opacity: 1;
+     visibility: visible;
+     transform: translate(0);
+     box-shadow: unset;
+     border-top: none;
+     display: none;
+     padding-right: 0;
+     margin-left: 20px;
+     padding-top: 0;
+     padding-bottom: 0;
+ }
+
+
+ .menu-style-flyout .main-navigation ul.navbar-nav>li .dropdownToggle {
+     top: 50%;
+     cursor: pointer;
+ }
+
+ .menu-style-flyout .main-navigation ul.navbar-nav>li .sub-menu .dropdownToggle {
+     left: 20px;
+     transform: translatey(-50%);
+ }
+
+ .menu-style-flyout .main-navigation .navbar-nav {
+     text-align: left;
+     padding-left: 0;
+     padding-right: 0;
+     display: inline-block;
+ }
+
+ .menu-style-flyout .main-navigation ul.navbar-nav li.dropdown-active>a>.dropdownToggle {
+     transform: translatey(-50%) rotate(-180deg);
+ }
+
+ .trydus-main-menu-wrap.menu-style-flyout .main-navigation ul.navbar-nav>li a {
+     padding: 2em 75px 2em 0;
+     color: var(--white-color);
+     font-size: 16px;
+     letter-spacing: 3px;
+     border: none;
+     position: relative;
+     background-color: transparent;
+ }
+
+ .trydus-main-menu-wrap.menu-style-flyout .main-navigation ul.navbar-nav>li a:hover {
+     background-color: transparent;
+     color: var(--accent-color-2);
+ }
+
+ .trydus-main-menu-wrap.menu-style-flyout .main-navigation ul.navbar-nav>li .sub-menu {
+     background-color: transparent;
+ }
+
+ .trydus-main-menu-wrap.menu-style-flyout .main-navigation ul.navbar-nav>li .sub-menu a {
+     color: rgb(255 255 255 / 70%);
+     font-size: 15px;
+ }
+
+ .admin-bar .menu-style-flyout .navbar-inner .navbar-toggler {
+     padding-top: 070px;
+ }
+
+ .menu-style-flyout .navbar-inner .navbar-toggler i {
+     color: #fff;
+     font-size: 21px;
+ }
+
+ .trydus-main-menu-wrap.navbar.menu-style-flyout>.navbar-toggler {
+     background-color: #fff;
+     color: #171b24;
+     font-size: 13px;
+     font-weight: 700;
+     font-style: normal;
+     letter-spacing: 3px;
+     line-height: 22px;
+     text-align: left;
+     text-transform: uppercase;
+     padding: 20px 20px;
+     display: inline-block;
+ }
+
+ .menu-style-inline .navbar-toggler {
+     display: none;
+ }
+
+
+ /* mega-menu fix  */
+ .menu-style-flyout .trydus-mega-menu>ul.sub-menu>li>a span.dropdownToggle {
+     display: none;
+ }
+
+ .menu-style-flyout .trydus-mega-menu>ul.sub-menu>li>.sub-menu {
+     display: block !important;
+     margin-right: 0 !important;
+ }
+
+
+
+ /* heading css   */
+ .trydus-heading-title.show-line-yes:after {
+     content: "";
+     position: absolute;
+     z-index: -1;
+ }
+
+
+ .trydus-heading-title.show-line-yes {
+     position: relative;
+     display: inline-block;
+     z-index: 1;
+ }
