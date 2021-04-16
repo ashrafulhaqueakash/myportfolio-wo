@@ -7,7 +7,7 @@ namespace Elementor;
  *
  * @since 1.0.0
  */
-class Trydus_Logo extends Widget_Base {
+class Akash_Logo extends Widget_Base {
 
 	/**
 	 * Get widget name.
@@ -20,7 +20,7 @@ class Trydus_Logo extends Widget_Base {
 	 * @return string Widget name.
 	 */
 	public function get_name() {
-		return 'trydus-logo';
+		return 'akash-logo';
 	}
 
 	/**
@@ -34,7 +34,7 @@ class Trydus_Logo extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'Trydus Logo', 'trydus-hp' );
+		return __( 'Akash Logo', 'akash-hp' );
 	}
 
 	/**
@@ -62,7 +62,7 @@ class Trydus_Logo extends Widget_Base {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return [ 'trydus-addons' ];
+		return [ 'akash-addons' ];
 	}
 
 	/**
@@ -78,20 +78,20 @@ class Trydus_Logo extends Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Content', 'trydus-hp' ),
+				'label' => __( 'Content', 'akash-hp' ),
 			]
         );
 		
 		$this->add_control(
 			'logo_type',
 			[
-				'label' => __( 'Logo Type', 'trydus-hp' ),
+				'label' => __( 'Logo Type', 'akash-hp' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'normal',
 				'options' => [
-					'normal'  => __( 'Normal Logo', 'trydus-hp' ),
-					'white' => __( 'White Logo', 'trydus-hp' ),
-					'custom' => __( 'Custom Logo', 'trydus-hp' ),
+					'normal'  => __( 'Normal Logo', 'akash-hp' ),
+					'white' => __( 'White Logo', 'akash-hp' ),
+					'custom' => __( 'Custom Logo', 'akash-hp' ),
 				],
 			]
 		);
@@ -112,7 +112,7 @@ class Trydus_Logo extends Widget_Base {
         $this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Logo Style', 'trydus-hp' ),
+				'label' => __( 'Logo Style', 'akash-hp' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
         );
@@ -120,7 +120,7 @@ class Trydus_Logo extends Widget_Base {
         $this->add_control(
 			'width',
 			[
-				'label' => __( 'Width', 'trydus-hp' ),
+				'label' => __( 'Width', 'akash-hp' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%', 'em' ],
 				'range' => [
@@ -135,7 +135,7 @@ class Trydus_Logo extends Widget_Base {
 				],
 
 				'selectors' => [
-					'{{WRAPPER}} .trydus-site-logo img' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .akash-site-logo img' => 'width: {{SIZE}}{{UNIT}};',
 				],
 			]
         );
@@ -157,21 +157,21 @@ class Trydus_Logo extends Widget_Base {
 
 		$settings = $this->get_settings_for_display();
 ?>
-        <a class="trydus-site-logo" href="<?php echo esc_url(home_url()) ?>">
+        <a class="akash-site-logo" href="<?php echo esc_url(home_url()) ?>">
             <?php
-				$trydus_option = get_option('trydus');
+				$akash_option = get_option('akash');
 
                 if( ! empty( $settings['custom_logo']['url'] && 'custom' == $settings['logo_type'] ) ){
 
 					echo Group_Control_Image_Size::get_attachment_image_html( $settings, 'custom_logo' );
 					
-                }else if ('normal' == $settings['logo_type'] && !empty( $trydus_option['logo']['url'] ) ) {
+                }else if ('normal' == $settings['logo_type'] && !empty( $akash_option['logo']['url'] ) ) {
 
-						echo '<img src="' . esc_url( $trydus_option['logo']['url'] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+						echo '<img src="' . esc_url( $akash_option['logo']['url'] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
 						
-                }else if ('white' == $settings['logo_type'] && !empty( $trydus_option['white_logo']['url'] ) ) {
+                }else if ('white' == $settings['logo_type'] && !empty( $akash_option['white_logo']['url'] ) ) {
 
-					echo '<img src="' . esc_url( $trydus_option['white_logo']['url'] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+					echo '<img src="' . esc_url( $akash_option['white_logo']['url'] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
 
 				}else if ( has_custom_logo() ) {
                     $custom_logo_id = get_theme_mod( 'custom_logo' );

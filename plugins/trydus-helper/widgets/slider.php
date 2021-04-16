@@ -7,7 +7,7 @@ namespace Elementor;
  *
  * @since 1.0.0
  */
-class Trydus_Slider extends Widget_Base
+class Akash_Slider extends Widget_Base
 {
 
     /**
@@ -22,7 +22,7 @@ class Trydus_Slider extends Widget_Base
      */
     public function get_name()
     {
-        return 'trydus-slider';
+        return 'akash-slider';
     }
 
     /**
@@ -37,7 +37,7 @@ class Trydus_Slider extends Widget_Base
      */
     public function get_title()
     {
-        return __('Hero Slide', 'trydus-hp');
+        return __('Hero Slide', 'akash-hp');
     }
 
     /**
@@ -81,7 +81,7 @@ class Trydus_Slider extends Widget_Base
      */
     public function get_categories()
     {
-        return ['trydus-addons'];
+        return ['akash-addons'];
     }
 
     /**
@@ -126,7 +126,7 @@ class Trydus_Slider extends Widget_Base
         $this->start_controls_section(
             'general',
             [
-                'label' => __('Content', 'trydus-hp'),
+                'label' => __('Content', 'akash-hp'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -138,7 +138,7 @@ class Trydus_Slider extends Widget_Base
         $slide->add_responsive_control(
             'slide_grid',
             [
-                'label' => __('Select Column', 'trydus-hp'),
+                'label' => __('Select Column', 'akash-hp'),
                 'type' => \Elementor\Controls_Manager::SELECT,
                 'options' => array(
                     '4' => '4 Column',
@@ -160,7 +160,7 @@ class Trydus_Slider extends Widget_Base
         $slide->add_responsive_control(
             'slide_grid_offset',
             [
-                'label' => __('Select Offset', 'trydus-hp'),
+                'label' => __('Select Offset', 'akash-hp'),
                 'type' => \Elementor\Controls_Manager::SELECT,
                 'options' => array(
                     '0' => 'None',
@@ -234,7 +234,7 @@ class Trydus_Slider extends Widget_Base
         $slide->add_control(
 			'btn_icon',
 			[
-				'label' => __( 'Button Icon', 'trydus-hp' ),
+				'label' => __( 'Button Icon', 'akash-hp' ),
 				'type' => \Elementor\Controls_Manager::ICONS,
 				'default' => [
 					'value' => 'fas fa-angle-right',
@@ -283,7 +283,7 @@ class Trydus_Slider extends Widget_Base
             $this->add_control(
                 'next_icon',
                 [
-                    'label' => __( 'Next Icon', 'trydus-hp' ),
+                    'label' => __( 'Next Icon', 'akash-hp' ),
                     'type' => \Elementor\Controls_Manager::ICONS,
                     'default' => [
                         'value' => 'fas fa-angle-right',
@@ -295,7 +295,7 @@ class Trydus_Slider extends Widget_Base
             $this->add_control(
                 'prev_icon',
                 [
-                    'label' => __( 'Prev Icon', 'trydus-hp' ),
+                    'label' => __( 'Prev Icon', 'akash-hp' ),
                     'type' => \Elementor\Controls_Manager::ICONS,
                     'default' => [
                         'value' => 'fas fa-angle-left',
@@ -325,7 +325,7 @@ class Trydus_Slider extends Widget_Base
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .akash-slider-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -336,7 +336,7 @@ class Trydus_Slider extends Widget_Base
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-content' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .akash-slider-content' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -362,7 +362,7 @@ class Trydus_Slider extends Widget_Base
                 [
                     'name' => 'heading_typography',
                     'label' => __('Heading', 'grayic'),
-                    'selector' => '{{WRAPPER}} .trydus-slider-content h4',
+                    'selector' => '{{WRAPPER}} .akash-slider-content h4',
                 ]
             );
             $this->add_control(
@@ -371,7 +371,7 @@ class Trydus_Slider extends Widget_Base
                     'label' => __('Heading Color', 'grayic'),
                     'type' => \Elementor\Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-content h4' => 'color: {{VALUE}}',
+                        '{{WRAPPER}} .akash-slider-content h4' => 'color: {{VALUE}}',
                     ],
                 ]
             );
@@ -383,7 +383,7 @@ class Trydus_Slider extends Widget_Base
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-content h4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .akash-slider-content h4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -394,7 +394,7 @@ class Trydus_Slider extends Widget_Base
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-content h4' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .akash-slider-content h4' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -422,7 +422,7 @@ class Trydus_Slider extends Widget_Base
                 [
                     'name' => 'content_typography',
                     'label' => __('Content', 'grayic'),
-                    'selector' => '{{WRAPPER}} .trydus-slider-content p',
+                    'selector' => '{{WRAPPER}} .akash-slider-content p',
                 ]
             );
             $this->add_control(
@@ -431,7 +431,7 @@ class Trydus_Slider extends Widget_Base
                     'label' => __('Content Color', 'grayic'),
                     'type' => \Elementor\Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-content p' => 'color: {{VALUE}}',
+                        '{{WRAPPER}} .akash-slider-content p' => 'color: {{VALUE}}',
                     ],
                 ]
             );
@@ -444,7 +444,7 @@ class Trydus_Slider extends Widget_Base
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-content p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .akash-slider-content p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -455,7 +455,7 @@ class Trydus_Slider extends Widget_Base
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-content p' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .akash-slider-content p' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -497,7 +497,7 @@ class Trydus_Slider extends Widget_Base
                 [
                     'name' => 'btn_typography',
                     'label' => __('Button Typography', 'grayic'),
-                    'selector' => '{{WRAPPER}} .trydus-slider-btn',
+                    'selector' => '{{WRAPPER}} .akash-slider-btn',
                 ]
             );
     
@@ -520,7 +520,7 @@ class Trydus_Slider extends Widget_Base
                     ],
     
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-btn' => 'width: {{SIZE}}{{UNIT}};',
+                        '{{WRAPPER}} .akash-slider-btn' => 'width: {{SIZE}}{{UNIT}};',
                     ],
                 ]
             );
@@ -544,7 +544,7 @@ class Trydus_Slider extends Widget_Base
                     ],
     
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-btn' => 'height: {{SIZE}}{{UNIT}};',
+                        '{{WRAPPER}} .akash-slider-btn' => 'height: {{SIZE}}{{UNIT}};',
                     ],
                 ]
             );
@@ -555,7 +555,7 @@ class Trydus_Slider extends Widget_Base
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .akash-slider-btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -566,7 +566,7 @@ class Trydus_Slider extends Widget_Base
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-btn' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .akash-slider-btn' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -577,7 +577,7 @@ class Trydus_Slider extends Widget_Base
                     'label' => __('Button Color', 'grayic'),
                     'type' => \Elementor\Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-btn' => 'color: {{VALUE}}',
+                        '{{WRAPPER}} .akash-slider-btn' => 'color: {{VALUE}}',
                     ],
                 ]
             );
@@ -587,7 +587,7 @@ class Trydus_Slider extends Widget_Base
                     'label' => __('Button BG Color', 'grayic'),
                     'type' => \Elementor\Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-btn' => 'background: {{VALUE}}',
+                        '{{WRAPPER}} .akash-slider-btn' => 'background: {{VALUE}}',
                     ],
                 ]
             );
@@ -599,7 +599,7 @@ class Trydus_Slider extends Widget_Base
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-btn' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .akash-slider-btn' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -623,7 +623,7 @@ class Trydus_Slider extends Widget_Base
                     'label' => __('Button Text Hover Color', 'grayic'),
                     'type' => \Elementor\Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-btn:hover' => 'color: {{VALUE}}',
+                        '{{WRAPPER}} .akash-slider-btn:hover' => 'color: {{VALUE}}',
                     ],
                 ]
             );
@@ -634,7 +634,7 @@ class Trydus_Slider extends Widget_Base
                     'label' => __('Button Hover BG Color', 'grayic'),
                     'type' => \Elementor\Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-btn:hover' => 'background: {{VALUE}}',
+                        '{{WRAPPER}} .akash-slider-btn:hover' => 'background: {{VALUE}}',
                     ],
                 ]
             );
@@ -687,7 +687,7 @@ class Trydus_Slider extends Widget_Base
                     'label' => __('Icon Color', 'grayic'),
                     'type' => \Elementor\Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-btn-con i' => 'color: {{VALUE}}',
+                        '{{WRAPPER}} .akash-slider-btn-con i' => 'color: {{VALUE}}',
                     ],
                 ]
             );
@@ -699,7 +699,7 @@ class Trydus_Slider extends Widget_Base
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%', 'em'],
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-btn-con i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .akash-slider-btn-con i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -712,7 +712,7 @@ class Trydus_Slider extends Widget_Base
                 [
                     'name' => 'icon_typography',
                     'label' => __('Icon Typography', 'grayic'),
-                    'selector' => '{{WRAPPER}} .trydus-slider-btn-con i',
+                    'selector' => '{{WRAPPER}} .akash-slider-btn-con i',
                 ]
             );
     
@@ -741,7 +741,7 @@ class Trydus_Slider extends Widget_Base
                     'label' => __('Icon Hover Color', 'grayic'),
                     'type' => \Elementor\Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .trydus-slider-btn:hover i' => 'color: {{VALUE}}',
+                        '{{WRAPPER}} .akash-slider-btn:hover i' => 'color: {{VALUE}}',
                     ],
                 ]
             );
@@ -853,7 +853,7 @@ class Trydus_Slider extends Widget_Base
             'label' => __('Nav Icon BG', 'grayic'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .trydus-hero-slider-wrap .owl-nav img' => 'background: {{VALUE}}',
+                '{{WRAPPER}} .akash-hero-slider-wrap .owl-nav img' => 'background: {{VALUE}}',
             ],
         ]
     );
@@ -864,7 +864,7 @@ class Trydus_Slider extends Widget_Base
             'type' => \Elementor\Controls_Manager::DIMENSIONS,
             'size_units' => ['px', '%', 'em'],
             'selectors' => [
-                '{{WRAPPER}} .trydus-hero-slider-wrap .owl-nav img' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .akash-hero-slider-wrap .owl-nav img' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
         ]
     );
@@ -876,7 +876,7 @@ class Trydus_Slider extends Widget_Base
             'type' => \Elementor\Controls_Manager::DIMENSIONS,
             'size_units' => ['px', '%', 'em'],
             'selectors' => [
-                '{{WRAPPER}} .trydus-hero-slider-wrap .owl-nav img' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .akash-hero-slider-wrap .owl-nav img' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
         ]
     );
@@ -897,7 +897,7 @@ class Trydus_Slider extends Widget_Base
             'label' => __('Nav Icon BG Hover', 'grayic'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .trydus-hero-slider-wrap .owl-nav img:hover' => 'background: {{VALUE}}',
+                '{{WRAPPER}} .akash-hero-slider-wrap .owl-nav img:hover' => 'background: {{VALUE}}',
             ],
         ]
     );
@@ -951,8 +951,8 @@ class Trydus_Slider extends Widget_Base
 
         ?>
 
-            <div class="trydus-hero-slider-wrap" <?php echo $this->get_render_attribute_string( 'slider_settings' ); ?>>
-                <div class="trydus-hero-slider owl-carousel">
+            <div class="akash-hero-slider-wrap" <?php echo $this->get_render_attribute_string( 'slider_settings' ); ?>>
+                <div class="akash-hero-slider owl-carousel">
                     <?php 
                     
                         if ( $settings['slides'] ) :
@@ -980,11 +980,11 @@ class Trydus_Slider extends Widget_Base
                                 );
                             
                             ?>
-                                <div class="trydus-hero-slide-item" style="background-image: url(<?php echo esc_url( $slide['slide_image']['url'] ) ?> ) ">
+                                <div class="akash-hero-slide-item" style="background-image: url(<?php echo esc_url( $slide['slide_image']['url'] ) ?> ) ">
                                     <div class="container">
                                         <div class="row">
                                             <div class="<?php printf( '%s %s ', $slide_grid, $slide_grid_offset )   ; ?>">
-                                                <div class="trydus-slider-content">
+                                                <div class="akash-slider-content">
                                                     <h4><?php echo esc_html( $slide['slide_title'] ) ?></h4>
                                                     <h4><?php echo esc_html( $slide['slide_content'] ) ?></h4>
                                                     <?php 
@@ -992,7 +992,7 @@ class Trydus_Slider extends Widget_Base
                                                         $nofollow = $slide['btn_link']['nofollow'] ? ' rel="nofollow"' : '';
 
                                                         printf(
-                                                            '<a href="%s" %s class="trydus-btn">%s <span class="trydus-btn-icon">%s</span></a>',
+                                                            '<a href="%s" %s class="akash-btn">%s <span class="akash-btn-icon">%s</span></a>',
                                                             $slide['btn_link']['url'],
                                                             $target . $nofollow,
                                                             esc_html($slide['btn_text']),

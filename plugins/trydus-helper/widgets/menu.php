@@ -7,7 +7,7 @@ namespace Elementor;
  *
  * @since 1.0.0
  */
-class Trydus_Menu extends Widget_Base
+class Akash_Menu extends Widget_Base
 {
 
     /**
@@ -22,7 +22,7 @@ class Trydus_Menu extends Widget_Base
      */
     public function get_name()
     {
-        return 'trydus-menu';
+        return 'akash-menu';
     }
 
     /**
@@ -37,7 +37,7 @@ class Trydus_Menu extends Widget_Base
      */
     public function get_title()
     {
-        return __('Primary Menu', 'trydus-hp');
+        return __('Primary Menu', 'akash-hp');
     }
 
     /**
@@ -67,7 +67,7 @@ class Trydus_Menu extends Widget_Base
      */
     public function get_categories()
     {
-        return ['trydus-addons'];
+        return ['akash-addons'];
     }
 
     /**
@@ -112,7 +112,7 @@ class Trydus_Menu extends Widget_Base
         $this->start_controls_section(
             'general',
             [
-                'label' => __('Content', 'trydus-hp'),
+                'label' => __('Content', 'akash-hp'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -120,12 +120,12 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
 			'menu_style',
 			[
-				'label' => __( 'Border Style', 'trydus-hp' ),
+				'label' => __( 'Border Style', 'akash-hp' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'inline',
 				'options' => [
-					'inline' => __( 'Inline', 'trydus-hp' ),
-					'flyout' => __( 'Flyout', 'trydus-hp' ),
+					'inline' => __( 'Inline', 'akash-hp' ),
+					'flyout' => __( 'Flyout', 'akash-hp' ),
 				],
 			]
         );
@@ -133,7 +133,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
 			'trigger_label',
 			[
-				'label' => __( 'Trigger Label', 'trydus-hp' ),
+				'label' => __( 'Trigger Label', 'akash-hp' ),
                 'type' => Controls_Manager::TEXT,
 			]
         );
@@ -166,26 +166,26 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'menu_align',
             [
-                'label' => __('Align', 'trydus-hp'),
+                'label' => __('Align', 'akash-hp'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'start' => [
-                        'title' => __('Left', 'trydus-hp'),
+                        'title' => __('Left', 'akash-hp'),
                         'icon' => 'fa fa-align-left',
                     ],
                     'center' => [
-                        'title' => __('top', 'trydus-hp'),
+                        'title' => __('top', 'akash-hp'),
                         'icon' => 'fa fa-align-center',
                     ],
                     'flex-end' => [
-                        'title' => __('Right', 'trydus-hp'),
+                        'title' => __('Right', 'akash-hp'),
                         'icon' => 'fa fa-align-right',
                     ],
                 ],
                 'default' => 'left',
 				'toggle' => true,
 				'selectors' => [
-					'{{WRAPPER}} .trydus-main-menu-wrap.navbar' => 'justify-content: {{VALUE}}'
+					'{{WRAPPER}} .akash-main-menu-wrap.navbar' => 'justify-content: {{VALUE}}'
 					] 
             ]
         );
@@ -193,7 +193,7 @@ class Trydus_Menu extends Widget_Base
         $this->start_controls_section(
 			'header_infos_section',
 			[
-				'label' => __( 'Header Info', 'trydus-hp' ),
+				'label' => __( 'Header Info', 'akash-hp' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
         );
@@ -201,10 +201,10 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
 			'show_infos',
 			[
-				'label' => __( 'Show Title', 'trydus-hp' ),
+				'label' => __( 'Show Title', 'akash-hp' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'trydus-hp' ),
-				'label_off' => __( 'Hide', 'trydus-hp' ),
+				'label_on' => __( 'Show', 'akash-hp' ),
+				'label_off' => __( 'Hide', 'akash-hp' ),
 				'return_value' => 'yes',
 				'default' => 'no',
 			]
@@ -214,18 +214,18 @@ class Trydus_Menu extends Widget_Base
 
 		$repeater->add_control(
 			'info_title', [
-				'label' => __( 'Title', 'trydus-hp' ),
+				'label' => __( 'Title', 'akash-hp' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'info Title' , 'trydus-hp' ),
+				'default' => __( 'info Title' , 'akash-hp' ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'info_content', [
-				'label' => __( 'Content', 'trydus-hp' ),
+				'label' => __( 'Content', 'akash-hp' ),
 				'type' => Controls_Manager::WYSIWYG,
-				'default' => __( 'info Content' , 'trydus-hp' ),
+				'default' => __( 'info Content' , 'akash-hp' ),
 				'show_label' => false,
 			]
         );
@@ -233,9 +233,9 @@ class Trydus_Menu extends Widget_Base
         $repeater->add_control(
 			'info_url',
 			[
-				'label' => __( 'Link', 'trydus-hp' ),
+				'label' => __( 'Link', 'akash-hp' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'trydus-hp' ),
+				'placeholder' => __( 'https://your-link.com', 'akash-hp' ),
 				'show_external' => true,
 			]
         );
@@ -243,13 +243,13 @@ class Trydus_Menu extends Widget_Base
 		$this->add_control(
 			'header_infos',
 			[
-				'label' => __( 'Repeater info', 'trydus-hp' ),
+				'label' => __( 'Repeater info', 'akash-hp' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'info_title' => __( 'Call us:', 'trydus-hp' ),
-						'info_content' => __( '(234) 567 8901', 'trydus-hp' ),
+						'info_title' => __( 'Call us:', 'akash-hp' ),
+						'info_content' => __( '(234) 567 8901', 'akash-hp' ),
 					],
 				],
                 'title_field' => '{{{ info_title }}}',
@@ -264,7 +264,7 @@ class Trydus_Menu extends Widget_Base
         $this->start_controls_section(
             'section_menu_style',
             [
-                'label' => __('Menu Style', 'trydus-hp'),
+                'label' => __('Menu Style', 'akash-hp'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'menu_style' => 'inline',
@@ -281,7 +281,7 @@ class Trydus_Menu extends Widget_Base
 		$this->start_controls_tab(
 			'menu_normal_tab',
 			[
-				'label' => __( 'Normal', 'trydus-hp' ),
+				'label' => __( 'Normal', 'akash-hp' ),
 			]
         );
         
@@ -289,7 +289,7 @@ class Trydus_Menu extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'menu_typography',
-                'label' => __('Menu Typography', 'trydus-hp'),
+                'label' => __('Menu Typography', 'akash-hp'),
                 'selector' => '{{WRAPPER}} .main-navigation ul.navbar-nav>li>a',
             ]
         );
@@ -297,7 +297,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'menu_color',
             [
-                'label' => __('Item Color', 'trydus-hp'),
+                'label' => __('Item Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-inline.navbar:not(.active) .main-navigation ul.navbar-nav>li>a, 
@@ -312,7 +312,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'menu_bg_color',
             [
-                'label' => __('Item Background Color', 'trydus-hp'),
+                'label' => __('Item Background Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-inline.navbar:not(.active) .main-navigation ul.navbar-nav>li>a' => 'background-color: {{VALUE}}',
@@ -324,7 +324,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'item_gap',
             [
-                'label' => __('Menu Gap', 'trydus-hp'),
+                'label' => __('Menu Gap', 'akash-hp'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -344,7 +344,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'item_padding',
             [
-                'label' => __('Item Padding', 'trydus-hp'),
+                'label' => __('Item Padding', 'akash-hp'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -361,7 +361,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'item_readius',
             [
-                'label' => __('Item Radius', 'trydus-hp'),
+                'label' => __('Item Radius', 'akash-hp'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -377,14 +377,14 @@ class Trydus_Menu extends Widget_Base
 		$this->start_controls_tab(
 			'menu_hover_tab',
 			[
-				'label' => __( 'Hover', 'trydus-hp' ),
+				'label' => __( 'Hover', 'akash-hp' ),
 			]
 		);
 
         $this->add_control(
             'menu_hover_color',
             [
-                'label' => __('Menu Hover Color', 'trydus-hp'),
+                'label' => __('Menu Hover Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-inline.navbar:not(.active) .main-navigation ul.navbar-nav>li>a:hover, 
@@ -397,7 +397,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'menu_bg_hover_color',
             [
-                'label' => __('Item Background Color', 'trydus-hp'),
+                'label' => __('Item Background Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-inline.navbar:not(.active) .main-navigation ul.navbar-nav>li:hover>a' => 'background-color: {{VALUE}}',
@@ -414,7 +414,7 @@ class Trydus_Menu extends Widget_Base
         $this->start_controls_section(
             'dropdown_style',
             [
-                'label' => __('Dropdown Style', 'trydus-hp'),
+                'label' => __('Dropdown Style', 'akash-hp'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'menu_style' => 'inline',
@@ -428,7 +428,7 @@ class Trydus_Menu extends Widget_Base
 		$this->start_controls_tab(
 			'dropdown_normal_tab',
 			[
-				'label' => __( 'Normal', 'trydus-hp' ),
+				'label' => __( 'Normal', 'akash-hp' ),
 			]
         );
         
@@ -436,7 +436,7 @@ class Trydus_Menu extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'dripdown_typography',
-                'label' => __('Menu Typography', 'trydus-hp'),
+                'label' => __('Menu Typography', 'akash-hp'),
                 'selector' => '{{WRAPPER}} .menu-style-inline .main-navigation ul.navbar-nav>li .sub-menu a',
             ]
         );
@@ -444,7 +444,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'dropdown_item_color',
             [
-                'label' => __('Item Color', 'trydus-hp'),
+                'label' => __('Item Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-inline .main-navigation ul.navbar-nav .menu-item-has-children .sub-menu a,
@@ -456,7 +456,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'dropdown_item_bg_color',
             [
-                'label' => __('Item Background Color', 'trydus-hp'),
+                'label' => __('Item Background Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-inline .main-navigation ul.navbar-nav .menu-item-has-children .sub-menu a' => 'background-color: {{VALUE}}',
@@ -467,7 +467,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'ddown_menu_border_color',
             [
-                'label' => __('Menu Border Color', 'trydus-hp'),
+                'label' => __('Menu Border Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-inline .main-navigation ul.navbar-nav .menu-item-has-children .sub-menu' => 'border-color: {{VALUE}}',
@@ -478,7 +478,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'dropdown_item_radius',
             [
-                'label' => __('Menu radius', 'trydus-hp'),
+                'label' => __('Menu radius', 'akash-hp'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -492,7 +492,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'dropdown_item_padding',
             [
-                'label' => __('Item Padding', 'trydus-hp'),
+                'label' => __('Item Padding', 'akash-hp'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -508,14 +508,14 @@ class Trydus_Menu extends Widget_Base
 		$this->start_controls_tab(
 			'dropdown_hover_tab',
 			[
-				'label' => __( 'Hover', 'trydus-hp' ),
+				'label' => __( 'Hover', 'akash-hp' ),
 			]
 		);
 
         $this->add_control(
             'dropdown_item_hover_color',
             [
-                'label' => __('Item Hover Color', 'trydus-hp'),
+                'label' => __('Item Hover Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .main-navigation ul.navbar-nav .menu-item-has-children .sub-menu a:hover,
@@ -527,7 +527,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'dropdown_item_bg_hover_color',
             [
-                'label' => __('Item Background Color', 'trydus-hp'),
+                'label' => __('Item Background Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-inline .main-navigation ul.navbar-nav .menu-item-has-children .sub-menu a:hover' => 'background-color: {{VALUE}}',
@@ -544,7 +544,7 @@ class Trydus_Menu extends Widget_Base
         $this->start_controls_section(
             'section_flyout_style',
             [
-                'label' => __('Flyout/Mobile Menu Style', 'trydus-hp'),
+                'label' => __('Flyout/Mobile Menu Style', 'akash-hp'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -557,7 +557,7 @@ class Trydus_Menu extends Widget_Base
 		$this->start_controls_tab(
 			'flyout_menu_normal_tab',
 			[
-				'label' => __( 'Normal', 'trydus-hp' ),
+				'label' => __( 'Normal', 'akash-hp' ),
 			]
         );
 
@@ -565,7 +565,7 @@ class Trydus_Menu extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'flyout_menu_typography',
-                'label' => __('Item Typography', 'trydus-hp'),
+                'label' => __('Item Typography', 'akash-hp'),
                 'selector' => '{{WRAPPER}} .menu-style-flyout .main-navigation ul.navbar-nav>li>a',
             ]
         );
@@ -573,7 +573,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'flyout_menu_color',
             [
-                'label' => __('Item Color', 'trydus-hp'),
+                'label' => __('Item Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-flyout .main-navigation ul.navbar-nav>li>a, 
@@ -586,7 +586,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'flyout_item_padding',
             [
-                'label' => __('Item Padding', 'trydus-hp'),
+                'label' => __('Item Padding', 'akash-hp'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -603,7 +603,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'flyout_menu_padding',
             [
-                'label' => __('Menu Padding', 'trydus-hp'),
+                'label' => __('Menu Padding', 'akash-hp'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -621,14 +621,14 @@ class Trydus_Menu extends Widget_Base
 		$this->start_controls_tab(
 			'flyout_menu_hover_tab',
 			[
-				'label' => __( 'Hover', 'trydus-hp' ),
+				'label' => __( 'Hover', 'akash-hp' ),
 			]
 		);
 
         $this->add_control(
             'flyout_menu_hover_color',
             [
-                'label' => __('Menu Hover Color', 'trydus-hp'),
+                'label' => __('Menu Hover Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-flyout .menu-style-flyout .main-navigation ul.navbar-nav>li>a:hover, 
@@ -648,7 +648,7 @@ class Trydus_Menu extends Widget_Base
         $this->start_controls_section(
             'flyout_dropdown_style',
             [
-                'label' => __('Flyout/Mobile Dropdown Style', 'trydus-hp'),
+                'label' => __('Flyout/Mobile Dropdown Style', 'akash-hp'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -659,7 +659,7 @@ class Trydus_Menu extends Widget_Base
 		$this->start_controls_tab(
 			'flyout_dropdown_normal_tab',
 			[
-				'label' => __( 'Normal', 'trydus-hp' ),
+				'label' => __( 'Normal', 'akash-hp' ),
 			]
 		);
                 
@@ -667,7 +667,7 @@ class Trydus_Menu extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'flyout_dripdown_typography',
-                'label' => __('Dropdown Typography', 'trydus-hp'),
+                'label' => __('Dropdown Typography', 'akash-hp'),
                 'selector' => '{{WRAPPER}} .menu-style-flyout .main-navigation ul.navbar-nav>li .sub-menu a',
             ]
         );
@@ -675,7 +675,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'flyout_dropdown_item_color',
             [
-                'label' => __('Item Color', 'trydus-hp'),
+                'label' => __('Item Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-flyout .main-navigation ul.navbar-nav .menu-item-has-children .sub-menu a,
@@ -687,7 +687,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'flyout_dropdown_item_bg_color',
             [
-                'label' => __('Item Background Color', 'trydus-hp'),
+                'label' => __('Item Background Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-flyout .main-navigation ul.navbar-nav .menu-item-has-children .sub-menu a' => 'background-color: {{VALUE}}',
@@ -698,7 +698,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'flyout_dropdown_item_padding',
             [
-                'label' => __('Item Padding', 'trydus-hp'),
+                'label' => __('Item Padding', 'akash-hp'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -714,14 +714,14 @@ class Trydus_Menu extends Widget_Base
 		$this->start_controls_tab(
 			'flyout_dropdown_hover_tab',
 			[
-				'label' => __( 'Hover', 'trydus-hp' ),
+				'label' => __( 'Hover', 'akash-hp' ),
 			]
 		);
 
         $this->add_control(
             'flyout_dropdown_item_hover_color',
             [
-                'label' => __('Item Hover Color', 'trydus-hp'),
+                'label' => __('Item Hover Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-flyout .main-navigation ul.navbar-nav .menu-item-has-children .sub-menu a:hover,
@@ -733,7 +733,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'flyout_dropdown_item_bg_hover_color',
             [
-                'label' => __('Item Background Color', 'trydus-hp'),
+                'label' => __('Item Background Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-flyout .main-navigation ul.navbar-nav .menu-item-has-children .sub-menu a:hover' => 'background-color: {{VALUE}}',
@@ -750,7 +750,7 @@ class Trydus_Menu extends Widget_Base
         $this->start_controls_section(
             'trigger_style',
             [
-                'label' => __('Trigger Style', 'trydus-hp'),
+                'label' => __('Trigger Style', 'akash-hp'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -763,7 +763,7 @@ class Trydus_Menu extends Widget_Base
         $this->start_controls_tab(
             'trigger_style_normal_tab',
             [
-                'label' => __('Normal', 'trydus-hp'),
+                'label' => __('Normal', 'akash-hp'),
             ]
         );
         
@@ -771,7 +771,7 @@ class Trydus_Menu extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'trigger_typography',
-                'label' => __('Trigger Typography', 'trydus-hp'),
+                'label' => __('Trigger Typography', 'akash-hp'),
                 'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .navbar-toggler.open-menu',
             ]
@@ -780,7 +780,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'trigger_color',
             [
-                'label' => __('Trigger Color', 'trydus-hp'),
+                'label' => __('Trigger Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .navbar-toggler.open-menu' => 'color: {{VALUE}}',
@@ -791,7 +791,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'trigger_background',
             [
-                'label' => __('Background Color', 'trydus-hp'),
+                'label' => __('Background Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .navbar-toggler.open-menu' => 'background-color: {{VALUE}}',
@@ -803,7 +803,7 @@ class Trydus_Menu extends Widget_Base
             Group_Control_Border::get_type(),
             [
                 'name' => 'trigger_border',
-                'label' => __('Border', 'trydus-hp'),
+                'label' => __('Border', 'akash-hp'),
                 'selector' => '{{WRAPPER}} .navbar-toggler.open-menu',
             ]
         );
@@ -858,7 +858,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'trigger_radius',
             [
-                'label' => __('Border Radius', 'trydus-hp'),
+                'label' => __('Border Radius', 'akash-hp'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -872,7 +872,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'trigger_padding',
             [
-                'label' => __('Button Padding', 'trydus-hp'),
+                'label' => __('Button Padding', 'akash-hp'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -886,7 +886,7 @@ class Trydus_Menu extends Widget_Base
         $this->start_controls_tab(
             'trigger_style_hover_tab',
             [
-                'label' => __('Hover', 'trydus-hp'),
+                'label' => __('Hover', 'akash-hp'),
             ]
         );
         
@@ -894,7 +894,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'trigger_hover_color',
             [
-                'label' => __('Trigger Color', 'trydus-hp'),
+                'label' => __('Trigger Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .navbar-toggler.open-menu:hover' => 'color: {{VALUE}}',
@@ -905,7 +905,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'trigger_hover_background',
             [
-                'label' => __('Background Color', 'trydus-hp'),
+                'label' => __('Background Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .navbar-toggler.open-menu:hover' => 'background-color: {{VALUE}}',
@@ -917,7 +917,7 @@ class Trydus_Menu extends Widget_Base
             Group_Control_Border::get_type(),
             [
                 'name' => 'trigger_hover_border',
-                'label' => __('Border', 'trydus-hp'),
+                'label' => __('Border', 'akash-hp'),
                 'selector' => '{{WRAPPER}} .navbar-toggler.open-menu:hover',
             ]
         );
@@ -925,7 +925,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'trigger_hover_animation',
             [
-                'label' => __('Hover Animation', 'trydus-hp'),
+                'label' => __('Hover Animation', 'akash-hp'),
                 'type' => Controls_Manager::HOVER_ANIMATION,
             ]
         );
@@ -933,7 +933,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'trigger_hover_radius',
             [
-                'label' => __('Border Radius', 'trydus-hp'),
+                'label' => __('Border Radius', 'akash-hp'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -953,7 +953,7 @@ class Trydus_Menu extends Widget_Base
         $this->start_controls_section(
             'infos_style_section',
             [
-                'label' => __('Info Style', 'trydus-hp'),
+                'label' => __('Info Style', 'akash-hp'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'show_infos' => 'yes',
@@ -968,7 +968,7 @@ class Trydus_Menu extends Widget_Base
         $this->start_controls_tab(
             'info_style_normal_tab',
             [
-                'label' => __('Normal', 'trydus-hp'),
+                'label' => __('Normal', 'akash-hp'),
             ]
         );
 
@@ -976,7 +976,7 @@ class Trydus_Menu extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'info_title_typography',
-                'label' => __('Title Typography', 'trydus-hp'),
+                'label' => __('Title Typography', 'akash-hp'),
                 'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .header-info span',
             ]
@@ -986,7 +986,7 @@ class Trydus_Menu extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'info_typography',
-                'label' => __('Info Typography', 'trydus-hp'),
+                'label' => __('Info Typography', 'akash-hp'),
                 'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .header-info h3 ',
             ]
@@ -995,7 +995,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'info_title_color',
             [
-                'label' => __('Info Title Color', 'trydus-hp'),
+                'label' => __('Info Title Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .header-info span' => 'color: {{VALUE}}',
@@ -1006,7 +1006,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'info_color',
             [
-                'label' => __('Info Color', 'trydus-hp'),
+                'label' => __('Info Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}}  .header-info h3' => 'color: {{VALUE}}',
@@ -1018,8 +1018,8 @@ class Trydus_Menu extends Widget_Base
             Group_Control_Border::get_type(),
             [
                 'name' => 'info_box_border',
-                'label' => __('Box Border', 'trydus-hp'),
-                'selector' => '{{WRAPPER}} .trydus-header-infos',
+                'label' => __('Box Border', 'akash-hp'),
+                'selector' => '{{WRAPPER}} .akash-header-infos',
             ]
         );
 
@@ -1049,7 +1049,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'ifno_item_padding',
             [
-                'label' => __('Info item Padding', 'trydus-hp'),
+                'label' => __('Info item Padding', 'akash-hp'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -1065,14 +1065,14 @@ class Trydus_Menu extends Widget_Base
         $this->start_controls_tab(
             'info_style_hover_tab',
             [
-                'label' => __('Hover', 'trydus-hp'),
+                'label' => __('Hover', 'akash-hp'),
             ]
         );
         
         $this->add_control(
             'info_title_color_hover',
             [
-                'label' => __('Info Title Color', 'trydus-hp'),
+                'label' => __('Info Title Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .header-info:hover span' => 'color: {{VALUE}}',
@@ -1083,7 +1083,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'info_color_hover',
             [
-                'label' => __('Info Color', 'trydus-hp'),
+                'label' => __('Info Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}}  .header-info:hover h3' => 'color: {{VALUE}}',
@@ -1100,7 +1100,7 @@ class Trydus_Menu extends Widget_Base
         $this->start_controls_section(
             'panel_style',
             [
-                'label' => __('Panel Style', 'trydus-hp'),
+                'label' => __('Panel Style', 'akash-hp'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -1109,7 +1109,7 @@ class Trydus_Menu extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'panel_label_typography',
-                'label' => __('Label Typography', 'trydus-hp'),
+                'label' => __('Label Typography', 'akash-hp'),
                 'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .menu-style-flyout .navbar-inner .navbar-toggler',
             ]
@@ -1119,7 +1119,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'panel_label_color',
             [
-                'label' => __('Label Color', 'trydus-hp'),
+                'label' => __('Label Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-flyout .navbar-inner .navbar-toggler' => 'color: {{VALUE}}',
@@ -1130,7 +1130,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'close_trigger_color',
             [
-                'label' => __('Close Trigger Color', 'trydus-hp'),
+                'label' => __('Close Trigger Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-flyout .navbar-inner .navbar-toggler i' => 'color: {{VALUE}}',
@@ -1142,7 +1142,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'close_trigger_fill_color',
             [
-                'label' => __('Close Trigger Fill Color', 'trydus-hp'),
+                'label' => __('Close Trigger Fill Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-flyout .navbar-inner .navbar-toggler svg path' => 'fill: {{VALUE}}',
@@ -1153,7 +1153,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'close_label_background',
             [
-                'label' => __('Label Background Color', 'trydus-hp'),
+                'label' => __('Label Background Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .navbar-toggler.close-menu' => 'background-color: {{VALUE}}',
@@ -1164,7 +1164,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_control(
             'panel_background',
             [
-                'label' => __('Panel Color', 'trydus-hp'),
+                'label' => __('Panel Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-style-flyout .navbar-inner' => 'background-color: {{VALUE}}',
@@ -1200,7 +1200,7 @@ class Trydus_Menu extends Widget_Base
             Group_Control_Box_Shadow::get_type(),
             [
                 'name' => 'panel_shadow',
-                'label' => __('Panel Shadow', 'trydus-hp'),
+                'label' => __('Panel Shadow', 'akash-hp'),
                 'selector' => '{{WRAPPER}}  .navbar-inner',
             ]
         );
@@ -1208,7 +1208,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'close_label_padding',
             [
-                'label' => __('Label Padding', 'trydus-hp'),
+                'label' => __('Label Padding', 'akash-hp'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -1221,7 +1221,7 @@ class Trydus_Menu extends Widget_Base
         $this->add_responsive_control(
             'panel_padding',
             [
-                'label' => __('Panel Padding', 'trydus-hp'),
+                'label' => __('Panel Padding', 'akash-hp'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -1254,7 +1254,7 @@ class Trydus_Menu extends Widget_Base
             'theme_location'        => 'main-menu',
             'menu_class'            => 'navbar-nav',
             'menu_id'               => 'navbar-nav',
-            'container_class'       => 'trydus-menu-container',
+            'container_class'       => 'akash-menu-container',
         ];
         $menu_align_desktop  = $settings['menu_align'];
         $menu_align_tablet   = $settings['menu_align_tablet'];
@@ -1262,7 +1262,7 @@ class Trydus_Menu extends Widget_Base
         $menu_align = sprintf('menu-align-%s menu-align-tablet-%s menu-align-mobile-%s', esc_attr($menu_align_desktop), esc_attr($menu_align_tablet), esc_attr($menu_align_mobile));
        
 ?>
-        <div class="trydus-main-menu-wrap navbar menu-style-<?php printf($settings['menu_style'] ) ?>">
+        <div class="akash-main-menu-wrap navbar menu-style-<?php printf($settings['menu_style'] ) ?>">
             <button class="navbar-toggler open-menu" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
                     <?php Icons_Manager::render_icon( $settings['trigger_open_icon'], [ 'aria-hidden' => 'true' ] ); ?>
@@ -1274,7 +1274,7 @@ class Trydus_Menu extends Widget_Base
             </button>
             <!-- end of Nav toggler -->
             <div class="navbar-inner">
-                <div class="trydus-mobile-menu"></div>
+                <div class="akash-mobile-menu"></div>
                 <button class="navbar-toggler close-menu" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
                     <?php if( !empty($settings['trigger_label']) ) {
                         printf('<span cla ss="trigger-label"> %s </span>', $settings['trigger_label'] ? $settings['trigger_label'] : '' ); 
@@ -1295,7 +1295,7 @@ class Trydus_Menu extends Widget_Base
                 </nav><!-- #site-navigation -->
 
                 <?php if ( 'yes' == $settings['show_infos'] ): ?>
-                       <div class="trydus-header-infos">
+                       <div class="akash-header-infos">
                            <?php  
                                 foreach (  $settings['header_infos'] as $info ) : 
                                     $target = $info['info_url']['is_external'] ? ' target="_blank"' : '';

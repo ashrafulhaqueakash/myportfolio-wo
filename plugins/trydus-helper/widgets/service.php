@@ -8,7 +8,7 @@ namespace Elementor;
  *
  * @since 1.0.0
  */
-class Trydus_Service extends Widget_Base
+class Akash_Service extends Widget_Base
 {
 
     /**
@@ -23,7 +23,7 @@ class Trydus_Service extends Widget_Base
      */
     public function get_name()
     {
-        return 'trydus-service';
+        return 'akash-service';
     }
 
     /**
@@ -38,7 +38,7 @@ class Trydus_Service extends Widget_Base
      */
     public function get_title()
     {
-        return __('Trydus Service', 'trydus-hp');
+        return __('Akash Service', 'akash-hp');
     }
 
     /**
@@ -83,7 +83,7 @@ class Trydus_Service extends Widget_Base
      */
     public function get_categories()
     {
-        return ['trydus-addons'];
+        return ['akash-addons'];
     }
 
     /**
@@ -104,7 +104,7 @@ class Trydus_Service extends Widget_Base
         $this->start_controls_section(
             'general',
             [
-                'label' => __('Content', 'trydus-hp'),
+                'label' => __('Content', 'akash-hp'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -141,7 +141,7 @@ class Trydus_Service extends Widget_Base
 
                 ?>
                     <div class="col-md-3">
-                    <div class="trydus-service-widget-item">
+                    <div class="akash-service-widget-item">
 
                         <?php if (!empty( get_post_meta( $idd, 'svg_icon', true ) ) ) : ?>
                             <div class="service-thumbnail-wrapper">

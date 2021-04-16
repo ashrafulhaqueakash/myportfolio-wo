@@ -8,28 +8,28 @@
         $(".menu-item-has-children > a").append('<span class="dropdownToggle"><i class="fas fa-angle-down"></i></span>');
         function navMenu() {
             
-        if(jQuery('.trydus-main-menu-wrap').hasClass('menu-style-inline')){
+        if(jQuery('.akash-main-menu-wrap').hasClass('menu-style-inline')){
             if( jQuery(window).width() < 960 ){
-                jQuery('.trydus-main-menu-wrap').addClass('menu-style-flyout');
-                jQuery('.trydus-main-menu-wrap').removeClass('menu-style-inline');
+                jQuery('.akash-main-menu-wrap').addClass('menu-style-flyout');
+                jQuery('.akash-main-menu-wrap').removeClass('menu-style-inline');
             } else{
-                jQuery('.trydus-main-menu-wrap').removeClass('menu-style-flyout');
-                jQuery('.trydus-main-menu-wrap').addClass('menu-style-inline');
+                jQuery('.akash-main-menu-wrap').removeClass('menu-style-flyout');
+                jQuery('.akash-main-menu-wrap').addClass('menu-style-inline');
             }
     
             $(window).resize(function(){
                 if( jQuery(window).width() < 960 ){
-                    jQuery('.trydus-main-menu-wrap').addClass('menu-style-flyout');
-                    jQuery('.trydus-main-menu-wrap').removeClass('menu-style-inline');
+                    jQuery('.akash-main-menu-wrap').addClass('menu-style-flyout');
+                    jQuery('.akash-main-menu-wrap').removeClass('menu-style-inline');
                 } else{
-                    jQuery('.trydus-main-menu-wrap').removeClass('menu-style-flyout');
-                    jQuery('.trydus-main-menu-wrap').addClass('menu-style-inline');
+                    jQuery('.akash-main-menu-wrap').removeClass('menu-style-flyout');
+                    jQuery('.akash-main-menu-wrap').addClass('menu-style-inline');
                 }
             })
         }
         
         
-            if ($(window).width() < 960 || $('.trydus-main-menu-wrap').hasClass('menu-style-flyout') ) {
+            if ($(window).width() < 960 || $('.akash-main-menu-wrap').hasClass('menu-style-flyout') ) {
                 // main menu toggleer icon (Mobile site only)
                 $('[data-toggle="navbarToggler"]').on("click", function (e) {
                     $('.navbar').toggleClass('active');
@@ -55,7 +55,7 @@
                     $(this).parent('li').toggleClass('dropdown-active');
                 })
         
-                $(".trydus-mega-menu> ul.sub-menu > li > a").unbind('click');            // Navbar moved up
+                $(".akash-mega-menu> ul.sub-menu > li > a").unbind('click');            // Navbar moved up
     
                 var $stickyNav = $(".navbar-sticky");
                 $(window).on("scroll load", function () {
@@ -89,9 +89,9 @@
     
     var sliderJS = function ($scope, $) {
 
-        var slider_settings = $scope.find('.trydus-hero-slider-wrap').data().sliderSetting;
+        var slider_settings = $scope.find('.akash-hero-slider-wrap').data().sliderSetting;
 
-        $('.trydus-hero-slider').owlCarousel({
+        $('.akash-hero-slider').owlCarousel({
             loop: true,
             margin: 0,
             nav: true,
@@ -113,8 +113,8 @@
     
     $(window).on("elementor/frontend/init", function () {
 
-        elementorFrontend.hooks.addAction("frontend/element_ready/trydus-menu.default", navMenu);
-        elementorFrontend.hooks.addAction("frontend/element_ready/trydus-slider.default", sliderJS);
+        elementorFrontend.hooks.addAction("frontend/element_ready/akash-menu.default", navMenu);
+        elementorFrontend.hooks.addAction("frontend/element_ready/akash-slider.default", sliderJS);
         
     });
 })(jQuery);

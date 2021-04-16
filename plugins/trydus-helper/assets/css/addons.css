@@ -201,21 +201,21 @@
 
 
 
- .menu-style-flyout.trydus-main-menu-wrap .navbar-inner .navbar-toggler-icon {
+ .menu-style-flyout.akash-main-menu-wrap .navbar-inner .navbar-toggler-icon {
      background-color: transparent;
      -webkit-transform: scale(0.85) rotate(-270deg);
      -ms-transform: scale(0.85) rotate(-270deg);
      transform: scale(0.85) rotate(-270deg);
  }
 
- .menu-style-flyout.trydus-main-menu-wrap .navbar-inner .navbar-toggler-icon:before {
+ .menu-style-flyout.akash-main-menu-wrap .navbar-inner .navbar-toggler-icon:before {
      top: 0;
      -webkit-transform: scale(0.65) rotate(-45deg);
      -ms-transform: scale(0.65) rotate(-45deg);
      transform: scale(0.65) rotate(-45deg);
  }
 
- .menu-style-flyout.trydus-main-menu-wrap .navbar-inner .navbar-toggler-icon:after {
+ .menu-style-flyout.akash-main-menu-wrap .navbar-inner .navbar-toggler-icon:after {
      top: 0;
      -webkit-transform: scale(0.65) rotate(45deg);
      -ms-transform: scale(0.65) rotate(45deg);
@@ -270,7 +270,7 @@
      transform: translatey(-50%) rotate(-180deg);
  }
 
- .trydus-main-menu-wrap.menu-style-flyout .main-navigation ul.navbar-nav>li a {
+ .akash-main-menu-wrap.menu-style-flyout .main-navigation ul.navbar-nav>li a {
      padding: 2em 75px 2em 0;
      color: var(--white-color);
      font-size: 16px;
@@ -280,16 +280,16 @@
      background-color: transparent;
  }
 
- .trydus-main-menu-wrap.menu-style-flyout .main-navigation ul.navbar-nav>li a:hover {
+ .akash-main-menu-wrap.menu-style-flyout .main-navigation ul.navbar-nav>li a:hover {
      background-color: transparent;
      color: var(--accent-color-2);
  }
 
- .trydus-main-menu-wrap.menu-style-flyout .main-navigation ul.navbar-nav>li .sub-menu {
+ .akash-main-menu-wrap.menu-style-flyout .main-navigation ul.navbar-nav>li .sub-menu {
      background-color: transparent;
  }
 
- .trydus-main-menu-wrap.menu-style-flyout .main-navigation ul.navbar-nav>li .sub-menu a {
+ .akash-main-menu-wrap.menu-style-flyout .main-navigation ul.navbar-nav>li .sub-menu a {
      color: rgb(255 255 255 / 70%);
      font-size: 15px;
  }
@@ -303,7 +303,7 @@
      font-size: 21px;
  }
 
- .trydus-main-menu-wrap.navbar.menu-style-flyout>.navbar-toggler {
+ .akash-main-menu-wrap.navbar.menu-style-flyout>.navbar-toggler {
      background-color: #fff;
      color: #171b24;
      font-size: 13px;
@@ -323,11 +323,11 @@
 
 
  /* mega-menu fix  */
- .menu-style-flyout .trydus-mega-menu>ul.sub-menu>li>a span.dropdownToggle {
+ .menu-style-flyout .akash-mega-menu>ul.sub-menu>li>a span.dropdownToggle {
      display: none;
  }
 
- .menu-style-flyout .trydus-mega-menu>ul.sub-menu>li>.sub-menu {
+ .menu-style-flyout .akash-mega-menu>ul.sub-menu>li>.sub-menu {
      display: block !important;
      margin-right: 0 !important;
  }
@@ -335,14 +335,14 @@
 
 
  /* heading css   */
- .trydus-heading-title.show-line-yes:after {
+ .akash-heading-title.show-line-yes:after {
      content: "";
      position: absolute;
      z-index: -1;
  }
 
 
- .trydus-heading-title.show-line-yes {
+ .akash-heading-title.show-line-yes {
      position: relative;
      display: inline-block;
      z-index: 1;

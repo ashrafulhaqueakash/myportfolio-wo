@@ -3,35 +3,35 @@
 if (!defined('ABSPATH')) {
 	exit;
 }
-class TrydusCustomPosts
+class AkashCustomPosts
 {
 	function __construct()
 	{
-		add_action( 'admin_menu', array($this, 'trydus_header_footer_menu') );
+		add_action( 'admin_menu', array($this, 'akash_header_footer_menu') );
 		// Header
-		add_action('init', array($this, 'trydus_header'));
-		add_action('init', array($this, 'trydus_footer'));
+		add_action('init', array($this, 'akash_header'));
+		add_action('init', array($this, 'akash_footer'));
 		// team 
-		// add_action('init', array($this, 'trydus_team'));
-		// add_action('init', array($this, 'trydus_team_category'));
-		// add_action('init', array($this, 'trydus_team_tags'));
+		// add_action('init', array($this, 'akash_team'));
+		// add_action('init', array($this, 'akash_team_category'));
+		// add_action('init', array($this, 'akash_team_tags'));
 		// services 
-		add_action('init', array($this, 'trydus_service'));
-		add_action('init', array($this, 'trydus_service_category'));
-		add_action('init', array($this, 'trydus_service_tags'));
+		add_action('init', array($this, 'akash_service'));
+		add_action('init', array($this, 'akash_service_category'));
+		add_action('init', array($this, 'akash_service_tags'));
 
 		// Projects 
-		// add_action('init', array($this, 'trydus_project'));
-		// add_action('init', array($this, 'trydus_project_category'));
-		// add_action('init', array($this, 'trydus_project_tags'));
+		// add_action('init', array($this, 'akash_project'));
+		// add_action('init', array($this, 'akash_project_category'));
+		// add_action('init', array($this, 'akash_project_tags'));
 
 		//sakib testimonial
-	// 	add_action('init', array($this, 'trydus_testimonial'));
-	// 	add_action('init', array($this, 'trydus_project_category'));
-	// 	add_action('init', array($this, 'trydus_project_tags'));
+	// 	add_action('init', array($this, 'akash_testimonial'));
+	// 	add_action('init', array($this, 'akash_project_category'));
+	// 	add_action('init', array($this, 'akash_project_tags'));
 	// 	flush_rewrite_rules( true );
 	}
-	public function trydus_header_footer_menu() {
+	public function akash_header_footer_menu() {
 		add_menu_page(
 			'Header & Footer',
 			'Header & Footer',
@@ -44,30 +44,30 @@ class TrydusCustomPosts
 	 }
 	 /**
 	 *
-	 * Trydus Header Footer Post Type
+	 * Akash Header Footer Post Type
 	 *
 	 */
-	public function trydus_header()
+	public function akash_header()
 	{
 		$labels = array(
-			'name'               => _x('Header', 'post type general name', 'trydus-hp'),
-			'singular_name'      => _x('Header', 'post type singular name', 'trydus-hp'),
-			'menu_name'          => _x('Header', 'admin menu', 'trydus-hp'),
-			'name_admin_bar'     => _x('Header', 'add new on admin bar', 'trydus-hp'),
-			'add_new'            => __('Add New Header', 'trydus-hp'),
-			'add_new_item'       => __('Add New Header', 'trydus-hp'),
-			'new_item'           => __('New Header', 'trydus-hp'),
-			'edit_item'          => __('Edit Header', 'trydus-hp'),
-			'view_item'          => __('View Header', 'trydus-hp'),
-			'all_items'          => __('All Headers', 'trydus-hp'),
-			'search_items'       => __('Search Headers', 'trydus-hp'),
-			'parent_item_colon'  => __('Parent :', 'trydus-hp'),
-			'not_found'          => __('No Headers found.', 'trydus-hp'),
-			'not_found_in_trash' => __('No Headers found in Trash.', 'trydus-hp')
+			'name'               => _x('Header', 'post type general name', 'akash-hp'),
+			'singular_name'      => _x('Header', 'post type singular name', 'akash-hp'),
+			'menu_name'          => _x('Header', 'admin menu', 'akash-hp'),
+			'name_admin_bar'     => _x('Header', 'add new on admin bar', 'akash-hp'),
+			'add_new'            => __('Add New Header', 'akash-hp'),
+			'add_new_item'       => __('Add New Header', 'akash-hp'),
+			'new_item'           => __('New Header', 'akash-hp'),
+			'edit_item'          => __('Edit Header', 'akash-hp'),
+			'view_item'          => __('View Header', 'akash-hp'),
+			'all_items'          => __('All Headers', 'akash-hp'),
+			'search_items'       => __('Search Headers', 'akash-hp'),
+			'parent_item_colon'  => __('Parent :', 'akash-hp'),
+			'not_found'          => __('No Headers found.', 'akash-hp'),
+			'not_found_in_trash' => __('No Headers found in Trash.', 'akash-hp')
 		);
 		$args = array(
 			'labels'             => $labels,
-			'description'        => __('Description.', 'trydus-hp'),
+			'description'        => __('Description.', 'akash-hp'),
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
@@ -82,29 +82,29 @@ class TrydusCustomPosts
 			'menu_position'      => null,
 			'supports'           => array('title','elementor', 'editor', 'thumbnail',  'page-attributes')
 		);
-		register_post_type('trydus_header', $args);
+		register_post_type('akash_header', $args);
 	}
-	public function trydus_footer()
+	public function akash_footer()
 	{
 		$labels = array(
-			'name'               => _x('Footer', 'post type general name', 'trydus-hp'),
-			'singular_name'      => _x('Footer', 'post type singular name', 'trydus-hp'),
-			'menu_name'          => _x('Footer', 'admin menu', 'trydus-hp'),
-			'name_admin_bar'     => _x('Footer', 'add new on admin bar', 'trydus-hp'),
-			'add_new'            => __('Add New Footer', 'trydus-hp'),
-			'add_new_item'       => __('Add New Footer', 'trydus-hp'),
-			'new_item'           => __('New Footer', 'trydus-hp'),
-			'edit_item'          => __('Edit Footer', 'trydus-hp'),
-			'view_item'          => __('View Footer', 'trydus-hp'),
-			'all_items'          => __('All Footers', 'trydus-hp'),
-			'search_items'       => __('Search Footers', 'trydus-hp'),
-			'parent_item_colon'  => __('Parent :', 'trydus-hp'),
-			'not_found'          => __('No Footers found.', 'trydus-hp'),
-			'not_found_in_trash' => __('No Footers found in Trash.', 'trydus-hp')
+			'name'               => _x('Footer', 'post type general name', 'akash-hp'),
+			'singular_name'      => _x('Footer', 'post type singular name', 'akash-hp'),
+			'menu_name'          => _x('Footer', 'admin menu', 'akash-hp'),
+			'name_admin_bar'     => _x('Footer', 'add new on admin bar', 'akash-hp'),
+			'add_new'            => __('Add New Footer', 'akash-hp'),
+			'add_new_item'       => __('Add New Footer', 'akash-hp'),
+			'new_item'           => __('New Footer', 'akash-hp'),
+			'edit_item'          => __('Edit Footer', 'akash-hp'),
+			'view_item'          => __('View Footer', 'akash-hp'),
+			'all_items'          => __('All Footers', 'akash-hp'),
+			'search_items'       => __('Search Footers', 'akash-hp'),
+			'parent_item_colon'  => __('Parent :', 'akash-hp'),
+			'not_found'          => __('No Footers found.', 'akash-hp'),
+			'not_found_in_trash' => __('No Footers found in Trash.', 'akash-hp')
 		);
 		$args = array(
 			'labels'             => $labels,
-			'description'        => __('Description.', 'trydus-hp'),
+			'description'        => __('Description.', 'akash-hp'),
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
@@ -119,34 +119,34 @@ class TrydusCustomPosts
 			'show_in_menu' 		 => 'header-footer',
 			'supports'           => array('title','elementor', 'editor', 'thumbnail',  'page-attributes')
 		);
-		register_post_type('trydus_footer', $args);
+		register_post_type('akash_footer', $args);
 	}
 	/**
 	 *
-	 * trydus Service Custom Post Type
+	 * akash Service Custom Post Type
 	 *
 	 */
-	public function trydus_service()
+	public function akash_service()
 	{
 		$labels = array(
-			'name'               => _x('Service', 'post type general name', 'trydus-hp'),
-			'singular_name'      => _x('Service', 'post type singular name', 'trydus-hp'),
-			'menu_name'          => _x('Service', 'admin menu', 'trydus-hp'),
-			'name_admin_bar'     => _x('Service', 'add new on admin bar', 'trydus-hp'),
-			'add_new'            => __('Add New Service', 'trydus-hp'),
-			'add_new_item'       => __('Add New Service', 'trydus-hp'),
-			'new_item'           => __('New Service', 'trydus-hp'),
-			'edit_item'          => __('Edit Service', 'trydus-hp'),
-			'view_item'          => __('View Service', 'trydus-hp'),
-			'all_items'          => __('All Services', 'trydus-hp'),
-			'search_items'       => __('Search Services', 'trydus-hp'),
-			'parent_item_colon'  => __('Parent :', 'trydus-hp'),
-			'not_found'          => __('No Services found.', 'trydus-hp'),
-			'not_found_in_trash' => __('No Services found in Trash.', 'trydus-hp')
+			'name'               => _x('Service', 'post type general name', 'akash-hp'),
+			'singular_name'      => _x('Service', 'post type singular name', 'akash-hp'),
+			'menu_name'          => _x('Service', 'admin menu', 'akash-hp'),
+			'name_admin_bar'     => _x('Service', 'add new on admin bar', 'akash-hp'),
+			'add_new'            => __('Add New Service', 'akash-hp'),
+			'add_new_item'       => __('Add New Service', 'akash-hp'),
+			'new_item'           => __('New Service', 'akash-hp'),
+			'edit_item'          => __('Edit Service', 'akash-hp'),
+			'view_item'          => __('View Service', 'akash-hp'),
+			'all_items'          => __('All Services', 'akash-hp'),
+			'search_items'       => __('Search Services', 'akash-hp'),
+			'parent_item_colon'  => __('Parent :', 'akash-hp'),
+			'not_found'          => __('No Services found.', 'akash-hp'),
+			'not_found_in_trash' => __('No Services found in Trash.', 'akash-hp')
 		);
 		$args = array(
 			'labels'             => $labels,
-			'description'        => __('Description.', 'trydus-hp'),
+			'description'        => __('Description.', 'akash-hp'),
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
@@ -163,20 +163,20 @@ class TrydusCustomPosts
 		register_post_type('service', $args);
 	}
 
-	public function trydus_service_category()
+	public function akash_service_category()
 	{
 		$labels = array(
-			'name'              => _x('Categories', 'taxonomy general name', 'trydus-hp'),
-			'singular_name'     => _x('Category', 'taxonomy singular name', 'trydus-hp'),
-			'search_items'      => __('Search Categories', 'trydus-hp'),
-			'all_items'         => __('All Categories', 'trydus-hp'),
-			'parent_item'       => __('Parent Category', 'trydus-hp'),
-			'parent_item_colon' => __('Parent Category:', 'trydus-hp'),
-			'edit_item'         => __('Edit Category', 'trydus-hp'),
-			'update_item'       => __('Update Category', 'trydus-hp'),
-			'add_new_item'      => __('Add New Category', 'trydus-hp'),
-			'new_item_name'     => __('New Category Name', 'trydus-hp'),
-			'menu_name'         => __('Category', 'trydus-hp'),
+			'name'              => _x('Categories', 'taxonomy general name', 'akash-hp'),
+			'singular_name'     => _x('Category', 'taxonomy singular name', 'akash-hp'),
+			'search_items'      => __('Search Categories', 'akash-hp'),
+			'all_items'         => __('All Categories', 'akash-hp'),
+			'parent_item'       => __('Parent Category', 'akash-hp'),
+			'parent_item_colon' => __('Parent Category:', 'akash-hp'),
+			'edit_item'         => __('Edit Category', 'akash-hp'),
+			'update_item'       => __('Update Category', 'akash-hp'),
+			'add_new_item'      => __('Add New Category', 'akash-hp'),
+			'new_item_name'     => __('New Category Name', 'akash-hp'),
+			'menu_name'         => __('Category', 'akash-hp'),
 		);
 		$args = array(
 			'hierarchical'      => true,
@@ -186,22 +186,22 @@ class TrydusCustomPosts
 			'query_var'         => true,
 			'rewrite'           => array('slug' => 'service-category'),
 		);
-		register_taxonomy('service-category', array('trydus-service'), $args);
+		register_taxonomy('service-category', array('akash-service'), $args);
 	}
-	public function trydus_service_tags()
+	public function akash_service_tags()
 	{
 		$labels = array(
-			'name'              => _x('Tags', 'taxonomy general name', 'trydus-hp'),
-			'singular_name'     => _x('Tag', 'taxonomy singular name', 'trydus-hp'),
-			'search_items'      => __('Search Tags', 'trydus-hp'),
-			'all_items'         => __('All Tags', 'trydus-hp'),
-			'parent_item'       => __('Parent Tag', 'trydus-hp'),
-			'parent_item_colon' => __('Parent Tag:', 'trydus-hp'),
-			'edit_item'         => __('Edit Tag', 'trydus-hp'),
-			'update_item'       => __('Update Tag', 'trydus-hp'),
-			'add_new_item'      => __('Add New Tag', 'trydus-hp'),
-			'new_item_name'     => __('New Tag Name', 'trydus-hp'),
-			'menu_name'         => __('Tag', 'trydus-hp'),
+			'name'              => _x('Tags', 'taxonomy general name', 'akash-hp'),
+			'singular_name'     => _x('Tag', 'taxonomy singular name', 'akash-hp'),
+			'search_items'      => __('Search Tags', 'akash-hp'),
+			'all_items'         => __('All Tags', 'akash-hp'),
+			'parent_item'       => __('Parent Tag', 'akash-hp'),
+			'parent_item_colon' => __('Parent Tag:', 'akash-hp'),
+			'edit_item'         => __('Edit Tag', 'akash-hp'),
+			'update_item'       => __('Update Tag', 'akash-hp'),
+			'add_new_item'      => __('Add New Tag', 'akash-hp'),
+			'new_item_name'     => __('New Tag Name', 'akash-hp'),
+			'menu_name'         => __('Tag', 'akash-hp'),
 		);
 		$args = array(
 			'hierarchical'      => true,
@@ -211,34 +211,34 @@ class TrydusCustomPosts
 			'query_var'         => true,
 			'rewrite'           => array('slug' => 'pf-tag'),
 		);
-		register_taxonomy('service-tag', array('trydus-service'), $args);
+		register_taxonomy('service-tag', array('akash-service'), $args);
 	}
 	/**
 	 *
-	 * Trydus Team Post Type
+	 * Akash Team Post Type
 	 *
 	 */
-	public function trydus_team()
+	public function akash_team()
 	{
 		$labels = array(
-			'name'               => _x('Team Member', 'post type general name', 'trydus-hp'),
-			'singular_name'      => _x('Team Member', 'post type singular name', 'trydus-hp'),
-			'menu_name'          => _x('Team Member', 'admin menu', 'trydus-hp'),
-			'name_admin_bar'     => _x('Team Member', 'add new on admin bar', 'trydus-hp'),
-			'add_new'            => __('Add New Member', 'trydus-hp'),
-			'add_new_item'       => __('Add New Member', 'trydus-hp'),
-			'new_item'           => __('New Member', 'trydus-hp'),
-			'edit_item'          => __('Edit Member', 'trydus-hp'),
-			'view_item'          => __('View Member', 'trydus-hp'),
-			'all_items'          => __('All Team Members', 'trydus-hp'),
-			'search_items'       => __('Search Team Members', 'trydus-hp'),
-			'parent_item_colon'  => __('Parent :', 'trydus-hp'),
-			'not_found'          => __('No Team Members found.', 'trydus-hp'),
-			'not_found_in_trash' => __('No Team Members found in Trash.', 'trydus-hp')
+			'name'               => _x('Team Member', 'post type general name', 'akash-hp'),
+			'singular_name'      => _x('Team Member', 'post type singular name', 'akash-hp'),
+			'menu_name'          => _x('Team Member', 'admin menu', 'akash-hp'),
+			'name_admin_bar'     => _x('Team Member', 'add new on admin bar', 'akash-hp'),
+			'add_new'            => __('Add New Member', 'akash-hp'),
+			'add_new_item'       => __('Add New Member', 'akash-hp'),
+			'new_item'           => __('New Member', 'akash-hp'),
+			'edit_item'          => __('Edit Member', 'akash-hp'),
+			'view_item'          => __('View Member', 'akash-hp'),
+			'all_items'          => __('All Team Members', 'akash-hp'),
+			'search_items'       => __('Search Team Members', 'akash-hp'),
+			'parent_item_colon'  => __('Parent :', 'akash-hp'),
+			'not_found'          => __('No Team Members found.', 'akash-hp'),
+			'not_found_in_trash' => __('No Team Members found in Trash.', 'akash-hp')
 		);
 		$args = array(
 			'labels'             => $labels,
-			'description'        => __('Description.', 'trydus-hp'),
+			'description'        => __('Description.', 'akash-hp'),
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
@@ -254,20 +254,20 @@ class TrydusCustomPosts
 		);
 		register_post_type('team', $args);
 	}
-	public function trydus_team_category()
+	public function akash_team_category()
 	{
 		$labels = array(
-			'name'              => _x('Categories', 'taxonomy general name', 'trydus-hp'),
-			'singular_name'     => _x('Category', 'taxonomy singular name', 'trydus-hp'),
-			'search_items'      => __('Search Categories', 'trydus-hp'),
-			'all_items'         => __('All Categories', 'trydus-hp'),
-			'parent_item'       => __('Parent Category', 'trydus-hp'),
-			'parent_item_colon' => __('Parent Category:', 'trydus-hp'),
-			'edit_item'         => __('Edit Category', 'trydus-hp'),
-			'update_item'       => __('Update Category', 'trydus-hp'),
-			'add_new_item'      => __('Add New Category', 'trydus-hp'),
-			'new_item_name'     => __('New Category Name', 'trydus-hp'),
-			'menu_name'         => __('Category', 'trydus-hp'),
+			'name'              => _x('Categories', 'taxonomy general name', 'akash-hp'),
+			'singular_name'     => _x('Category', 'taxonomy singular name', 'akash-hp'),
+			'search_items'      => __('Search Categories', 'akash-hp'),
+			'all_items'         => __('All Categories', 'akash-hp'),
+			'parent_item'       => __('Parent Category', 'akash-hp'),
+			'parent_item_colon' => __('Parent Category:', 'akash-hp'),
+			'edit_item'         => __('Edit Category', 'akash-hp'),
+			'update_item'       => __('Update Category', 'akash-hp'),
+			'add_new_item'      => __('Add New Category', 'akash-hp'),
+			'new_item_name'     => __('New Category Name', 'akash-hp'),
+			'menu_name'         => __('Category', 'akash-hp'),
 		);
 		$args = array(
 			'hierarchical'      => true,
@@ -279,20 +279,20 @@ class TrydusCustomPosts
 		);
 		register_taxonomy('team-category', array('team'), $args);
 	}
-	public function trydus_team_tags()
+	public function akash_team_tags()
 	{
 		$labels = array(
-			'name'              => _x('Tags', 'taxonomy general name', 'trydus-hp'),
-			'singular_name'     => _x('Tag', 'taxonomy singular name', 'trydus-hp'),
-			'search_items'      => __('Search Tags', 'trydus-hp'),
-			'all_items'         => __('All Tags', 'trydus-hp'),
-			'parent_item'       => __('Parent Tag', 'trydus-hp'),
-			'parent_item_colon' => __('Parent Tag:', 'trydus-hp'),
-			'edit_item'         => __('Edit Tag', 'trydus-hp'),
-			'update_item'       => __('Update Tag', 'trydus-hp'),
-			'add_new_item'      => __('Add New Tag', 'trydus-hp'),
-			'new_item_name'     => __('New Tag Name', 'trydus-hp'),
-			'menu_name'         => __('Tag', 'trydus-hp'),
+			'name'              => _x('Tags', 'taxonomy general name', 'akash-hp'),
+			'singular_name'     => _x('Tag', 'taxonomy singular name', 'akash-hp'),
+			'search_items'      => __('Search Tags', 'akash-hp'),
+			'all_items'         => __('All Tags', 'akash-hp'),
+			'parent_item'       => __('Parent Tag', 'akash-hp'),
+			'parent_item_colon' => __('Parent Tag:', 'akash-hp'),
+			'edit_item'         => __('Edit Tag', 'akash-hp'),
+			'update_item'       => __('Update Tag', 'akash-hp'),
+			'add_new_item'      => __('Add New Tag', 'akash-hp'),
+			'new_item_name'     => __('New Tag Name', 'akash-hp'),
+			'menu_name'         => __('Tag', 'akash-hp'),
 		);
 		$args = array(
 			'hierarchical'      => false,
@@ -307,30 +307,30 @@ class TrydusCustomPosts
 
 	/**
 	 *
-	 * Trydus Team Post Type
+	 * Akash Team Post Type
 	 *
 	 */
-	public function trydus_project()
+	public function akash_project()
 	{
 		$labels = array(
-			'name'               => _x('Project', 'post type general name', 'trydus-hp'),
-			'singular_name'      => _x('Project', 'post type singular name', 'trydus-hp'),
-			'menu_name'          => _x('Project', 'admin menu', 'trydus-hp'),
-			'name_admin_bar'     => _x('Project', 'add new on admin bar', 'trydus-hp'),
-			'add_new'            => __('Add New Project', 'trydus-hp'),
-			'add_new_item'       => __('Add New Project', 'trydus-hp'),
-			'new_item'           => __('New Project', 'trydus-hp'),
-			'edit_item'          => __('Edit Project', 'trydus-hp'),
-			'view_item'          => __('View Project', 'trydus-hp'),
-			'all_items'          => __('All Projects', 'trydus-hp'),
-			'search_items'       => __('Search Projects', 'trydus-hp'),
-			'parent_item_colon'  => __('Parent :', 'trydus-hp'),
-			'not_found'          => __('No Projects found.', 'trydus-hp'),
-			'not_found_in_trash' => __('No Projects found in Trash.', 'trydus-hp')
+			'name'               => _x('Project', 'post type general name', 'akash-hp'),
+			'singular_name'      => _x('Project', 'post type singular name', 'akash-hp'),
+			'menu_name'          => _x('Project', 'admin menu', 'akash-hp'),
+			'name_admin_bar'     => _x('Project', 'add new on admin bar', 'akash-hp'),
+			'add_new'            => __('Add New Project', 'akash-hp'),
+			'add_new_item'       => __('Add New Project', 'akash-hp'),
+			'new_item'           => __('New Project', 'akash-hp'),
+			'edit_item'          => __('Edit Project', 'akash-hp'),
+			'view_item'          => __('View Project', 'akash-hp'),
+			'all_items'          => __('All Projects', 'akash-hp'),
+			'search_items'       => __('Search Projects', 'akash-hp'),
+			'parent_item_colon'  => __('Parent :', 'akash-hp'),
+			'not_found'          => __('No Projects found.', 'akash-hp'),
+			'not_found_in_trash' => __('No Projects found in Trash.', 'akash-hp')
 		);
 		$args = array(
 			'labels'             => $labels,
-			'description'        => __('Description.', 'trydus-hp'),
+			'description'        => __('Description.', 'akash-hp'),
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
@@ -346,20 +346,20 @@ class TrydusCustomPosts
 		);
 		register_post_type('project', $args);
 	}
-	public function trydus_project_category()
+	public function akash_project_category()
 	{
 		$labels = array(
-			'name'              => _x('Categories', 'taxonomy general name', 'trydus-hp'),
-			'singular_name'     => _x('Category', 'taxonomy singular name', 'trydus-hp'),
-			'search_items'      => __('Search Categories', 'trydus-hp'),
-			'all_items'         => __('All Categories', 'trydus-hp'),
-			'parent_item'       => __('Parent Category', 'trydus-hp'),
-			'parent_item_colon' => __('Parent Category:', 'trydus-hp'),
-			'edit_item'         => __('Edit Category', 'trydus-hp'),
-			'update_item'       => __('Update Category', 'trydus-hp'),
-			'add_new_item'      => __('Add New Category', 'trydus-hp'),
-			'new_item_name'     => __('New Category Name', 'trydus-hp'),
-			'menu_name'         => __('Category', 'trydus-hp'),
+			'name'              => _x('Categories', 'taxonomy general name', 'akash-hp'),
+			'singular_name'     => _x('Category', 'taxonomy singular name', 'akash-hp'),
+			'search_items'      => __('Search Categories', 'akash-hp'),
+			'all_items'         => __('All Categories', 'akash-hp'),
+			'parent_item'       => __('Parent Category', 'akash-hp'),
+			'parent_item_colon' => __('Parent Category:', 'akash-hp'),
+			'edit_item'         => __('Edit Category', 'akash-hp'),
+			'update_item'       => __('Update Category', 'akash-hp'),
+			'add_new_item'      => __('Add New Category', 'akash-hp'),
+			'new_item_name'     => __('New Category Name', 'akash-hp'),
+			'menu_name'         => __('Category', 'akash-hp'),
 		);
 		$args = array(
 			'hierarchical'      => true,
@@ -371,20 +371,20 @@ class TrydusCustomPosts
 		);
 		register_taxonomy('project-category', array('project'), $args);
 	}
-	public function trydus_project_tags()
+	public function akash_project_tags()
 	{
 		$labels = array(
-			'name'              => _x('Tags', 'taxonomy general name', 'trydus-hp'),
-			'singular_name'     => _x('Tag', 'taxonomy singular name', 'trydus-hp'),
-			'search_items'      => __('Search Tags', 'trydus-hp'),
-			'all_items'         => __('All Tags', 'trydus-hp'),
-			'parent_item'       => __('Parent Tag', 'trydus-hp'),
-			'parent_item_colon' => __('Parent Tag:', 'trydus-hp'),
-			'edit_item'         => __('Edit Tag', 'trydus-hp'),
-			'update_item'       => __('Update Tag', 'trydus-hp'),
-			'add_new_item'      => __('Add New Tag', 'trydus-hp'),
-			'new_item_name'     => __('New Tag Name', 'trydus-hp'),
-			'menu_name'         => __('Tag', 'trydus-hp'),
+			'name'              => _x('Tags', 'taxonomy general name', 'akash-hp'),
+			'singular_name'     => _x('Tag', 'taxonomy singular name', 'akash-hp'),
+			'search_items'      => __('Search Tags', 'akash-hp'),
+			'all_items'         => __('All Tags', 'akash-hp'),
+			'parent_item'       => __('Parent Tag', 'akash-hp'),
+			'parent_item_colon' => __('Parent Tag:', 'akash-hp'),
+			'edit_item'         => __('Edit Tag', 'akash-hp'),
+			'update_item'       => __('Update Tag', 'akash-hp'),
+			'add_new_item'      => __('Add New Tag', 'akash-hp'),
+			'new_item_name'     => __('New Tag Name', 'akash-hp'),
+			'menu_name'         => __('Tag', 'akash-hp'),
 		);
 		$args = array(
 			'hierarchical'      => false,
@@ -398,56 +398,56 @@ class TrydusCustomPosts
 	}
 	
 	//sakib
-	public function trydus_testimonial()
+	public function akash_testimonial()
 	{
 		$labels = array(
-			'name'               => _x('Testimonial', 'post type general name', 'trydus-hp'),
-			'singular_name'      => _x('Testimonial', 'post type singular name', 'trydus-hp'),
-			'menu_name'          => _x('Testimonial', 'admin menu', 'trydus-hp'),
-			'name_admin_bar'     => _x('Testimonial', 'add new on admin bar', 'trydus-hp'),
-			'add_new'            => __('Add New Testimonial', 'trydus-hp'),
-			'add_new_item'       => __('Add New Testimonial', 'trydus-hp'),
-			'new_item'           => __('New Testimonial', 'trydus-hp'),
-			'edit_item'          => __('Edit Testimonial', 'trydus-hp'),
-			'view_item'          => __('View Testimonial', 'trydus-hp'),
-			'all_items'          => __('All Testimonial', 'trydus-hp'),
-			'search_items'       => __('Search Testimonial', 'trydus-hp'),
-			'parent_item_colon'  => __('Parent :', 'trydus-hp'),
-			'not_found'          => __('No Testimonial found.', 'trydus-hp'),
-			'not_found_in_trash' => __('No Testimonial found in Trash.', 'trydus-hp')
+			'name'               => _x('Testimonial', 'post type general name', 'akash-hp'),
+			'singular_name'      => _x('Testimonial', 'post type singular name', 'akash-hp'),
+			'menu_name'          => _x('Testimonial', 'admin menu', 'akash-hp'),
+			'name_admin_bar'     => _x('Testimonial', 'add new on admin bar', 'akash-hp'),
+			'add_new'            => __('Add New Testimonial', 'akash-hp'),
+			'add_new_item'       => __('Add New Testimonial', 'akash-hp'),
+			'new_item'           => __('New Testimonial', 'akash-hp'),
+			'edit_item'          => __('Edit Testimonial', 'akash-hp'),
+			'view_item'          => __('View Testimonial', 'akash-hp'),
+			'all_items'          => __('All Testimonial', 'akash-hp'),
+			'search_items'       => __('Search Testimonial', 'akash-hp'),
+			'parent_item_colon'  => __('Parent :', 'akash-hp'),
+			'not_found'          => __('No Testimonial found.', 'akash-hp'),
+			'not_found_in_trash' => __('No Testimonial found in Trash.', 'akash-hp')
 		);
 		$args = array(
 			'labels'             => $labels,
-			'description'        => __('Description.', 'trydus-hp'),
+			'description'        => __('Description.', 'akash-hp'),
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
 			'menu_icon'          => 'dashicons-testimonial',
-			'rewrite'            => array('slug' => 'trydus_testimonial', 'with_front' => true, 'pages' => true, 'feeds' => true),
+			'rewrite'            => array('slug' => 'akash_testimonial', 'with_front' => true, 'pages' => true, 'feeds' => true),
 			'capability_type'    => 'post',
 			'has_archive'        => false,
 			'hierarchical'       => true,
 			'menu_position'      => null,
 			'supports'           => array('title', 'editor', 'thumbnail',  'page-attributes')
 		);
-		register_post_type('trydus_testimonial', $args);
+		register_post_type('akash_testimonial', $args);
 	}
-	public function trydus_testimonial_category()
+	public function akash_testimonial_category()
 		{
 			$labels = array(
-				'name'              => _x('Categories', 'taxonomy general name', 'trydus-hp'),
-				'singular_name'     => _x('Category', 'taxonomy singular name', 'trydus-hp'),
-				'search_items'      => __('Search Categories', 'trydus-hp'),
-				'all_items'         => __('All Categories', 'trydus-hp'),
-				'parent_item'       => __('Parent Category', 'trydus-hp'),
-				'parent_item_colon' => __('Parent Category:', 'trydus-hp'),
-				'edit_item'         => __('Edit Category', 'trydus-hp'),
-				'update_item'       => __('Update Category', 'trydus-hp'),
-				'add_new_item'      => __('Add New Category', 'trydus-hp'),
-				'new_item_name'     => __('New Category Name', 'trydus-hp'),
-				'menu_name'         => __('Category', 'trydus-hp'),
+				'name'              => _x('Categories', 'taxonomy general name', 'akash-hp'),
+				'singular_name'     => _x('Category', 'taxonomy singular name', 'akash-hp'),
+				'search_items'      => __('Search Categories', 'akash-hp'),
+				'all_items'         => __('All Categories', 'akash-hp'),
+				'parent_item'       => __('Parent Category', 'akash-hp'),
+				'parent_item_colon' => __('Parent Category:', 'akash-hp'),
+				'edit_item'         => __('Edit Category', 'akash-hp'),
+				'update_item'       => __('Update Category', 'akash-hp'),
+				'add_new_item'      => __('Add New Category', 'akash-hp'),
+				'new_item_name'     => __('New Category Name', 'akash-hp'),
+				'menu_name'         => __('Category', 'akash-hp'),
 			);
 			$args = array(
 				'hierarchical'      => true,
@@ -457,22 +457,22 @@ class TrydusCustomPosts
 				'query_var'         => true,
 				'rewrite'           => array('slug' => 'project-category'),
 			);
-			register_taxonomy('testimonial_category', array('trydus_testimonial'), $args);
+			register_taxonomy('testimonial_category', array('akash_testimonial'), $args);
 		}
-		public function trydus_testimonial_tags()
+		public function akash_testimonial_tags()
 		{
 			$labels = array(
-				'name'              => _x('Tags', 'taxonomy general name', 'trydus-hp'),
-				'singular_name'     => _x('Tag', 'taxonomy singular name', 'trydus-hp'),
-				'search_items'      => __('Search Tags', 'trydus-hp'),
-				'all_items'         => __('All Tags', 'trydus-hp'),
-				'parent_item'       => __('Parent Tag', 'trydus-hp'),
-				'parent_item_colon' => __('Parent Tag:', 'trydus-hp'),
-				'edit_item'         => __('Edit Tag', 'trydus-hp'),
-				'update_item'       => __('Update Tag', 'trydus-hp'),
-				'add_new_item'      => __('Add New Tag', 'trydus-hp'),
-				'new_item_name'     => __('New Tag Name', 'trydus-hp'),
-				'menu_name'         => __('Tag', 'trydus-hp'),
+				'name'              => _x('Tags', 'taxonomy general name', 'akash-hp'),
+				'singular_name'     => _x('Tag', 'taxonomy singular name', 'akash-hp'),
+				'search_items'      => __('Search Tags', 'akash-hp'),
+				'all_items'         => __('All Tags', 'akash-hp'),
+				'parent_item'       => __('Parent Tag', 'akash-hp'),
+				'parent_item_colon' => __('Parent Tag:', 'akash-hp'),
+				'edit_item'         => __('Edit Tag', 'akash-hp'),
+				'update_item'       => __('Update Tag', 'akash-hp'),
+				'add_new_item'      => __('Add New Tag', 'akash-hp'),
+				'new_item_name'     => __('New Tag Name', 'akash-hp'),
+				'menu_name'         => __('Tag', 'akash-hp'),
 			);
 			$args = array(
 				'hierarchical'      => false,
@@ -482,7 +482,7 @@ class TrydusCustomPosts
 				'query_var'         => true,
 				'rewrite'           => array('slug' => 'project-tag'),
 			);
-			register_taxonomy('testimonial_tag', array('trydus_testimonial'), $args);
+			register_taxonomy('testimonial_tag', array('akash_testimonial'), $args);
 		}
 }
-$trydusCcases_stydyInstance = new TrydusCustomPosts;
+$akashCcases_stydyInstance = new AkashCustomPosts;

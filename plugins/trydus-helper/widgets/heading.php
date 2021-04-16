@@ -8,7 +8,7 @@ namespace Elementor;
  *
  * @since 1.0.0
  */
-class Trydus_Heading extends Widget_Base
+class Akash_Heading extends Widget_Base
 {
 
     /**
@@ -23,7 +23,7 @@ class Trydus_Heading extends Widget_Base
      */
     public function get_name()
     {
-        return 'trydus-heading';
+        return 'akash-heading';
     }
 
     /**
@@ -38,7 +38,7 @@ class Trydus_Heading extends Widget_Base
      */
     public function get_title()
     {
-        return __('Trydus Heading', 'trydus-hp');
+        return __('Akash Heading', 'akash-hp');
     }
 
     /**
@@ -83,7 +83,7 @@ class Trydus_Heading extends Widget_Base
      */
     public function get_categories()
     {
-        return ['trydus-addons'];
+        return ['akash-addons'];
     }
 
     /**
@@ -104,7 +104,7 @@ class Trydus_Heading extends Widget_Base
         $this->start_controls_section(
             'general',
             [
-                'label' => __('Content', 'trydus-hp'),
+                'label' => __('Content', 'akash-hp'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -124,13 +124,13 @@ class Trydus_Heading extends Widget_Base
         $this->add_control(
             'title',
             [
-                'label' => __('Title', 'trydus-hp'),
+                'label' => __('Title', 'akash-hp'),
                 'type' => Controls_Manager::TEXTAREA,
                 'dynamic' => [
                     'active' => true,
                 ],
-                'placeholder' => __('Enter your title', 'trydus-hp'),
-                'default' => __('Add Your Heading Text Here', 'trydus-hp'),
+                'placeholder' => __('Enter your title', 'akash-hp'),
+                'default' => __('Add Your Heading Text Here', 'akash-hp'),
                 'condition' => [
                     'show_page_title!' => 'yes',
                 ]
@@ -140,7 +140,7 @@ class Trydus_Heading extends Widget_Base
         $this->add_control(
             'link',
             [
-                'label' => __('Link', 'trydus-hp'),
+                'label' => __('Link', 'akash-hp'),
                 'type' => Controls_Manager::URL,
                 'dynamic' => [
                     'active' => true,
@@ -156,7 +156,7 @@ class Trydus_Heading extends Widget_Base
         $this->add_control(
             'header_size',
             [
-                'label' => __('HTML Tag', 'trydus-hp'),
+                'label' => __('HTML Tag', 'akash-hp'),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
                     'h1' => 'H1',
@@ -176,23 +176,23 @@ class Trydus_Heading extends Widget_Base
         $this->add_responsive_control(
             'align',
             [
-                'label' => __('Alignment', 'trydus-hp'),
+                'label' => __('Alignment', 'akash-hp'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => __('Left', 'trydus-hp'),
+                        'title' => __('Left', 'akash-hp'),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __('Center', 'trydus-hp'),
+                        'title' => __('Center', 'akash-hp'),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __('Right', 'trydus-hp'),
+                        'title' => __('Right', 'akash-hp'),
                         'icon' => 'eicon-text-align-right',
                     ],
                     'justify' => [
-                        'title' => __('Justified', 'trydus-hp'),
+                        'title' => __('Justified', 'akash-hp'),
                         'icon' => 'eicon-text-align-justify',
                     ],
                 ],
@@ -209,7 +209,7 @@ class Trydus_Heading extends Widget_Base
         $this->start_controls_section(
             'section_title_style',
             [
-                'label' => __('Title', 'trydus-hp'),
+                'label' => __('Title', 'akash-hp'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -217,11 +217,11 @@ class Trydus_Heading extends Widget_Base
         $this->add_control(
             'title_color',
             [
-                'label' => __('Text Color', 'trydus-hp'),
+                'label' => __('Text Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
 
                 'selectors' => [
-                    '{{WRAPPER}} .trydus-heading-title' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .akash-heading-title' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -231,7 +231,7 @@ class Trydus_Heading extends Widget_Base
             [
                 'name' => 'typography',
     
-                'selector' => '{{WRAPPER}} .trydus-heading-title',
+                'selector' => '{{WRAPPER}} .akash-heading-title',
             ]
         );
 
@@ -239,17 +239,17 @@ class Trydus_Heading extends Widget_Base
             Group_Control_Text_Shadow::get_type(),
             [
                 'name' => 'text_shadow',
-                'selector' => '{{WRAPPER}} .trydus-heading-title',
+                'selector' => '{{WRAPPER}} .akash-heading-title',
             ]
         );
 
         $this->add_control(
             'blend_mode',
             [
-                'label' => __('Blend Mode', 'trydus-hp'),
+                'label' => __('Blend Mode', 'akash-hp'),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    '' => __('Normal', 'trydus-hp'),
+                    '' => __('Normal', 'akash-hp'),
                     'multiply' => 'Multiply',
                     'screen' => 'Screen',
                     'overlay' => 'Overlay',
@@ -264,7 +264,7 @@ class Trydus_Heading extends Widget_Base
                     'luminosity' => 'Luminosity',
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .trydus-heading-title' => 'mix-blend-mode: {{VALUE}}',
+                    '{{WRAPPER}} .akash-heading-title' => 'mix-blend-mode: {{VALUE}}',
                 ],
                 'separator' => 'none',
             ]
@@ -275,7 +275,7 @@ class Trydus_Heading extends Widget_Base
 		$this->start_controls_section(
 			'section_line_style',
 			[
-				'label' => __( 'Line Style', 'trydus-hp' ),
+				'label' => __( 'Line Style', 'akash-hp' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -283,10 +283,10 @@ class Trydus_Heading extends Widget_Base
         $this->add_control(
             'enable_line',
             [
-                'label' => __('Enable Line?', 'trydus-hp'),
+                'label' => __('Enable Line?', 'akash-hp'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Yes', 'trydus-hp'),
-                'label_off' => __('No', 'trydus-hp'),
+                'label_on' => __('Yes', 'akash-hp'),
+                'label_off' => __('No', 'akash-hp'),
                 'return_value' => 'yes',
                 'default' => 'no',
             ]
@@ -295,10 +295,10 @@ class Trydus_Heading extends Widget_Base
         $this->add_control(
             'line_color',
             [
-                'label' => __('Line Color', 'trydus-hp'),
+                'label' => __('Line Color', 'akash-hp'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .trydus-heading-title:after' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}} .akash-heading-title:after' => 'background-color: {{VALUE}}',
                 ],
                 'condition' => [
                     'enable_line' => 'yes',
@@ -309,7 +309,7 @@ class Trydus_Heading extends Widget_Base
         $this->add_responsive_control(
             'line_width',
             [
-                'label' => __('Line Width', 'trydus-hp'),
+                'label' => __('Line Width', 'akash-hp'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -324,7 +324,7 @@ class Trydus_Heading extends Widget_Base
                 ],
                 'devices' => ['desktop', 'tablet', 'mobile'],
                 'selectors' => [
-                    '{{WRAPPER}} .trydus-heading-title:after'  => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .akash-heading-title:after'  => 'width: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'enable_line' => 'yes',
@@ -335,7 +335,7 @@ class Trydus_Heading extends Widget_Base
         $this->add_responsive_control(
             'line_height',
             [
-                'label' => __('Line height', 'trydus-hp'),
+                'label' => __('Line height', 'akash-hp'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -350,7 +350,7 @@ class Trydus_Heading extends Widget_Base
                 ],
                 'devices' => ['desktop', 'tablet', 'mobile'],
                 'selectors' => [
-                    '{{WRAPPER}} .trydus-heading-title:after'  => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .akash-heading-title:after'  => 'height: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'enable_line' => 'yes',
@@ -361,7 +361,7 @@ class Trydus_Heading extends Widget_Base
         $this->add_responsive_control(
             'line_x_position',
             [
-                'label' => __('Shape Y Position', 'trydus-hp'),
+                'label' => __('Shape Y Position', 'akash-hp'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -376,7 +376,7 @@ class Trydus_Heading extends Widget_Base
                 ],
                 'devices' => ['desktop', 'tablet', 'mobile'],
                 'selectors' => [
-                    '{{WRAPPER}} .trydus-heading-title:after'  => 'top: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .akash-heading-title:after'  => 'top: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'enable_line' => 'yes',
@@ -387,7 +387,7 @@ class Trydus_Heading extends Widget_Base
         $this->add_responsive_control(
             'line_y_position',
             [
-                'label' => __('Shape X Position', 'trydus-hp'),
+                'label' => __('Shape X Position', 'akash-hp'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -402,8 +402,8 @@ class Trydus_Heading extends Widget_Base
                 ],
                 'devices' => ['desktop', 'tablet', 'mobile'],
                 'selectors' => [
-                    '{{WRAPPER}} .trydus-heading-title:after'  => 'left: {{SIZE}}{{UNIT}};',
-                    'body.rtl {{WRAPPER}} .trydus-heading-title:after'  => 'right: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .akash-heading-title:after'  => 'left: {{SIZE}}{{UNIT}};',
+                    'body.rtl {{WRAPPER}} .akash-heading-title:after'  => 'right: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
                     'enable_line' => 'yes',
@@ -437,7 +437,7 @@ class Trydus_Heading extends Widget_Base
             $title = $settings['title'];
         }
 
-        $this->add_render_attribute('title', 'class', 'trydus-heading-title');
+        $this->add_render_attribute('title', 'class', 'akash-heading-title');
         $this->add_render_attribute( 'title', 'class', 'show-line-'. $settings['enable_line'] );
 
 

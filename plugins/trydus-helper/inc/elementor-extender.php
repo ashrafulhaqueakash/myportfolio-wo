@@ -17,7 +17,7 @@ add_action( 'elementor/element/text-editor/section_style/after_section_start', f
 //     $element->start_controls_section(
 //         'style_section',
 //         [
-//             'label' => __( 'Extra', 'trydus-hp' ),
+//             'label' => __( 'Extra', 'akash-hp' ),
 //             'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 //         ]
 //     );
